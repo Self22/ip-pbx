@@ -1,0 +1,14 @@
+body {
+  color: black;
+}
+
+.slide {
+  background: #67f83a;
+}
+
+.functions {
+
+  &::before {
+    background: rgba(96, 255, 42, 0.3);
+  }
+}

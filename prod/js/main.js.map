@@ -1,0 +1,41 @@
+{
+  "version": 3,
+  "sources": [
+    "main.js"
+  ],
+  "names": [
+    "$",
+    "document",
+    "ready",
+    "bxSlider",
+    "parallax",
+    "imageSrc",
+    "flag",
+    "on",
+    "e",
+    "preventDefault",
+    "$this",
+    "this",
+    "item",
+    "closest",
+    "container",
+    "content",
+    "find",
+    "ndx",
+    "index",
+    "reqItem",
+    "eq",
+    "activeItem",
+    "filter",
+    "addClass",
+    "siblings",
+    "removeClass",
+    "fadeOut",
+    "fadeIn"
+  ],
+  "mappings": "AAAAA,EAAEC,UAAUC,MAAM,WACdF,EAAE,aAAaG,WAEfH,EAAE,oBAAoBI,UAAUC,SAAU,qBAG9CL,EAAEC,UAAUC,MAAM,WAId,GAAII,IAAO,CAEXN,GAAE,eAAeO,GAAG,QAAS,SAAUC,GACnCA,EAAEC,gBAEF,IACIC,GAAQV,EAAEW,MACVC,EAAOF,EAAMG,QAAQ,eACrBC,EAAYJ,EAAMG,QAAQ,oBAC1BE,EAAUD,EAAUE,KAAK,gBACzBC,EAAML,EAAKM,QACXC,EAAUJ,EAAQK,GAAGH,GACrBI,EAAaN,EAAQO,OAAO,sBAE5BhB,KACAA,GAAO,EAGPM,EAAKW,SAAS,qBACTC,WACAC,YAAY,qBAEjBJ,EAAWK,QAAQ,IAAK,WACpBP,EAAQQ,OAAO,IAAK,WAChB3B,EAAEW,MAAMY,SAAS,sBACZC,WACAC,YAAY,sBACjBnB,GAAO",
+  "file": "main.js",
+  "sourcesContent": [
+    "$(document).ready(function () {\r\n    $('.bxslider').bxSlider();\r\n    //$(\".header__contacts\").animated(\"flipInY\", \"fadeOutDown\");\r\n    $('.parallax-window').parallax({imageSrc: 'img/how_bg.jpg'});\r\n});\r\n\r\n$(document).ready(function() {\r\n\r\n    //tabs\r\n\r\n    var flag = true;\r\n\r\n    $('.func__linc').on('click', function (e) {\r\n        e.preventDefault();\r\n\r\n        var\r\n            $this = $(this),\r\n            item = $this.closest('.func__item'),\r\n            container = $this.closest('.func__container'),\r\n            content = container.find('.func__descr'),\r\n            ndx = item.index(),\r\n            reqItem = content.eq(ndx),\r\n            activeItem = content.filter('.func__descr-active');\r\n\r\n        if (flag) {\r\n            flag = false;\r\n\r\n\r\n            item.addClass('func__item-active')\r\n                .siblings()\r\n                .removeClass('func__item-active');\r\n\r\n            activeItem.fadeOut(500, function () {\r\n                reqItem.fadeIn(500, function () {\r\n                    $(this).addClass('func__descr-active')\r\n                        .siblings()\r\n                        .removeClass('func__descr-active');\r\n                    flag = true\r\n                });\r\n            });\r\n\r\n        }\r\n\r\n    })\r\n\r\n});"
+  ]
+}

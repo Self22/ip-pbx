@@ -1,0 +1,24 @@
+{
+  "name": "ip-pbx",
+  "version": "1.0.0",
+  "description": "ip-pbx_site",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-watch": "^4.1.1",
+    "imagemin-pngquant": "^4.0.0",
+    "npm install gulp-clean-css": "^2.0.11",
+    "npm install gulp-imagemin": "^3.0.3",
+    "rimraf": "^2.3.1"
+  }
+}
