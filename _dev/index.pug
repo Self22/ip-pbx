@@ -6,7 +6,7 @@ html(lang="ru")
         title   Виртуальная АТС Евро-тел | Облачная АТС Евро-тел
         link(rel="stylesheet" href="css/jquery.bxslider.min.css")
         link(rel="stylesheet" href="css/animate.css")
-        //link(rel="stylesheet" href="css/bootstrap.css")
+        link(rel="stylesheet" href="css/bootstrap.css")
         link(rel="stylesheet" href="css/main.css")
         link(rel="icon" href="img/favicon.ico" type="image/x-icon")
     body
@@ -167,11 +167,11 @@ html(lang="ru")
                 table(class="table table__price")
                     thead
                         tr
-                            th  Название пакета
-                            th  Free
-                            th  Начальная
-                            th  Бизнес
-                            th  Гранд
+                            th.first__col  Название пакета
+                            th.second__col  Free
+                            th.third__col  Начальная
+                            th.fourth__col  Бизнес
+                            th.fifth__col  Гранд
                     tbody
                         tr
                             th(scope='row') Внутренние номера
@@ -280,16 +280,47 @@ html(lang="ru")
                                 <i class="fa fa-check-square-o" aria-hidden="true"></i>
                         tr(class='tr__price')
                             th(scope="row") Ежемесячно
-                            td  Free
+                            td  Бесплатно
                             td  99 грн.
                             td  150 грн.
                             td  199 грн.
+            article.contacts
+                h2.article__header  Контакты
+                .contacts__container
+                    .contacts__content
+                        address
+                            a(href="tel:+380443211022") +38 (044) 32-11-022
+                            br
+                            a(href="tel:+380504544043")  +38 (050) 454-40-43
+                            br
+                            a(href="mailto:evrotel.ipats@gmail.com")    evrotel.ipats@gmail.com
+                            p.support   Техподдержка:
+                                br
+                                a(href="mailto:support@evro-tel.com.ua")    support@evro-tel.com.ua
+                            p.post   Почтовый адрес: 01015, г.Киев, ул. Старонаводницкая, 6/6
 
+                    .contacts__form
+                        h3  Оставьте Ваше сообщение:
+                        form(action="http://formspree.io/evrotel.ipats@gmail.com" class="main_form" novalidate target="_blank" method="post")
+                            label.form-group
+                                span.color_element  * Ваше имя:
+                                input(type="text" name="name" placeholder="Имя" data-validation-required-message="Вы не ввели имя" required)
+                                span(class="help-block text-danger")
+                            label.form-group
+                                span.color_element * Ваш E-mail:
+                                input(type="email" name="email" placeholder="E-mail" data-validation-required-message="Не корректно введен E-mail" required)
+                                span(class="help-block text-danger")
+                            label.form-group
+                                span.color_element * Ваше сообщение:
+                                textarea(name="message" placeholder="Сообщение" data-validation-required-message="Вы не ввели сообщение" required)
+                                span(class="help-block text-danger")
+                            button  Отправить
 
 
     script(type="text/javascript" src="js/jquery.min.js")
     script(type="text/javascript" src="js/jquery.bxslider.min.js")
     script(type="text/javascript" src="js/parallax.min.js")
+    script(type="text/javascript" src="jqBootstrapValidation.js")
     script(type="text/javascript" src="js/waypoints.min.js")
     script(type="text/javascript" src="js/animate-css.js")
     script(type="text/javascript" src="js/main.js")

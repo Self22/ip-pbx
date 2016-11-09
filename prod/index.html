@@ -6,7 +6,7 @@
     <title>  Виртуальная АТС Евро-тел | Облачная АТС Евро-тел</title>
     <link rel="stylesheet" href="css/jquery.bxslider.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <!--link(rel="stylesheet" href="css/bootstrap.css")-->
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   </head>
@@ -161,11 +161,11 @@
         <table class="table table__price">
           <thead>
             <tr>
-              <th> Название пакета</th>
-              <th> Free</th>
-              <th> Начальная</th>
-              <th> Бизнес</th>
-              <th> Гранд</th>
+              <th class="first__col"> Название пакета</th>
+              <th class="second__col"> Free</th>
+              <th class="third__col"> Начальная</th>
+              <th class="fourth__col"> Бизнес</th>
+              <th class="fifth__col"> Гранд</th>
             </tr>
           </thead>
           <tbody>
@@ -255,7 +255,7 @@
             </tr>
             <tr class="tr__price">
               <th scope="row">Ежемесячно</th>
-              <td> Free</td>
+              <td> Бесплатно</td>
               <td> 99 грн.</td>
               <td> 150 грн.</td>
               <td> 199 грн.</td>
@@ -263,11 +263,46 @@
           </tbody>
         </table>
       </article>
+      <article class="contacts">
+        <h2 class="article__header"> Контакты</h2>
+        <div class="contacts__container">
+          <div class="contacts__content">
+            <address><a href="tel:+380443211022">+38 (044) 32-11-022</a><br><a href="tel:+380504544043"> +38 (050)
+              454-40-43</a><br><a href="mailto:evrotel.ipats@gmail.com"> evrotel.ipats@gmail.com</a>
+              <p class="support"> Техподдержка:<br><a href="mailto:support@evro-tel.com.ua"> support@evro-tel.com.ua</a>
+              </p>
+              <p class="post"> Почтовый адрес: 01015, г.Киев, ул. Старонаводницкая, 6/6</p>
+            </address>
+          </div>
+          <div class="contacts__form">
+            <h3> Оставьте Ваше сообщение:</h3>
+            <form class="main_form" action="http://formspree.io/evrotel.ipats@gmail.com" novalidate target="_blank"
+                  method="post">
+              <label class="form-group"><span class="color_element"> * Ваше имя:</span>
+                <input type="text" name="name" placeholder="Имя" data-validation-required-message="Вы не ввели имя"
+                       required><span class="help-block text-danger"></span>
+              </label>
+              <label class="form-group"><span class="color_element">* Ваш E-mail:</span>
+                <input type="email" name="email" placeholder="E-mail"
+                       data-validation-required-message="Не корректно введен E-mail" required><span
+                        class="help-block text-danger"></span>
+              </label>
+              <label class="form-group"><span class="color_element">* Ваше сообщение:</span>
+                <textarea name="message" placeholder="Сообщение"
+                          data-validation-required-message="Вы не ввели сообщение" required></textarea><span
+                        class="help-block text-danger"></span>
+              </label>
+              <button> Отправить</button>
+            </form>
+          </div>
+        </div>
+      </article>
     </div>
   </body>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
   <script type="text/javascript" src="js/parallax.min.js"></script>
+  <script type="text/javascript" src="jqBootstrapValidation.js"></script>
   <script type="text/javascript" src="js/waypoints.min.js"></script>
   <script type="text/javascript" src="js/animate-css.js"></script>
   <script type="text/javascript" src="js/main.js"></script>

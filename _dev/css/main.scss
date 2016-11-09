@@ -45,6 +45,34 @@ html {
   }
 }
 
+p {
+  font-size: 18px;
+
+  @include desktop {
+    font-size: 18px;
+  }
+
+  @include laptop {
+    font-size: 16px;
+  }
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
 .wrapper {
   padding: 10px;
   padding-top: 40px;
@@ -212,8 +240,6 @@ article {
   position: relative;
   padding-top: 70px;
   padding-bottom: 30px;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 .parallax-window {
@@ -243,6 +269,7 @@ article {
   width: 600px;
   text-align: justify;
   margin-top: 45px;
+  margin-left: 5%;
   padding: 10px;
   background: rgba(255, 255, 255, 0.7);
 }
@@ -271,6 +298,8 @@ article {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .func__list, .func__item {
@@ -411,6 +440,8 @@ article {
   flex-flow: row wrap;
   justify-content: space-between;
   text-align: justify;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .gsm__intro {
@@ -494,7 +525,7 @@ article {
 }
 
 .price {
-  height: 660px;
+  height: 820px;
   background: url("../img/telephons_bg.jpg");
   background-size: cover;
 
@@ -509,7 +540,7 @@ article {
   margin: 0 auto;
   margin-top: 40px;
   width: 96%;
-  background-color: rgba(55, 58, 60, 0.9);
+  background-color: rgba(55, 58, 60, 0.8);
   color: #fbf1cb;
   text-align: center;
   font-size: 20px;
@@ -521,6 +552,10 @@ article {
   & thead {
     color: #eaeaff;
     text-transform: uppercase;
+
+    & tr {
+      height: 40px;
+    }
   }
 
   & .fa-times {
@@ -533,4 +568,89 @@ article {
   font-weight: 600;
   color: #f8d34c;
   text-transform: uppercase;
+  height: 40px;
+}
+
+.second__col, .third__col, .fourth__col, .fifth__col {
+  width: 15%;
+}
+
+//contacts
+
+.contacts__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.contacts__content, .contacts__form {
+  flex: 1 1 200px;
+}
+
+.contacts__content {
+  text-align: right;
+  text-align: -webkit-right;
+  font-weight: 600;
+  font-size: 27px;
+
+  padding-right: 10%;
+  padding-top: 50px;
+  border-right: 2px solid black;
+
+  & address {
+    font-style: normal;
+
+  }
+
+  & p {
+    font-size: 25px;
+
+    & .post {
+      max-width: 400px;
+    }
+  }
+
+}
+
+.contacts__form {
+  padding-left: 10%;
+  padding-top: 25px;
+  padding-right: 5%;
+
+  & h3 {
+    margin-top: 0;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  & span {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  & button {
+    font-size: 20px;
+    font-weight: 400;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    border-radius: 0px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+
+.form-group {
+  display: block;
+
+  & input, textarea {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    text-indent: 5px;
+    font-weight: 100;
+    margin-top: 5px;
+  }
+
 }
