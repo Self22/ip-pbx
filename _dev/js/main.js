@@ -1,8 +1,20 @@
 $(document).ready(function () {
+    //Slider
     $('.bxslider').bxSlider();
+
     //$(".header__contacts").animated("flipInY", "fadeOutDown");
+
+    //Parallax
     $('.parallax-window').parallax({imageSrc: 'img/how_bg.jpg'});
+
+    //Валидация
+    $("input, select, textarea").jqBootstrapValidation();
+
+    //Фиксированная навигация
+
 });
+
+$('#nav__container').singlePageNav();
 
 $(document).ready(function () {
 
@@ -43,4 +55,7 @@ $(document).ready(function () {
 
     })
 
+
 });
+
+

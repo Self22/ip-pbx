@@ -51,7 +51,7 @@
 
                     $inputs.each(function (i, el) {
                         var $this = $(el),
-                            $controlGroup = $this.parents(".control-group").first();
+                            $controlGroup = $this.parents(".form-group").first();
                         if (
                             $controlGroup.hasClass("warning")
                         ) {
@@ -82,7 +82,7 @@
 
                     // Get references to everything we're interested in
                     var $this = $(this),
-                        $controlGroup = $this.parents(".control-group").first(),
+                        $controlGroup = $this.parents(".form-group").first(),
                         $helpBlock = $controlGroup.find(".help-block").first(),
                         $form = $this.parents("form").first(),
                         validatorNames = [];
@@ -183,7 +183,7 @@
                         //                                                     EMAIL
                         // ---------------------------------------------------------
                         if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "email") {
-                            message = "Not a valid email address<!-- data-validator-validemail-message to override -->";
+                            message = "E-mail введён некорректно!<!-- data-validator-validemail-message to override -->";
                             if ($this.data("validationValidemailMessage")) {
                                 message = $this.data("validationValidemailMessage");
                             } else if ($this.data("validationEmailMessage")) {
@@ -510,7 +510,7 @@
 
                         var
                             $this = $(this),
-                            $controlGroup = $this.parents(".control-group").first(),
+                            $controlGroup = $this.parents(".form-group").first(),
                             $helpBlock = $controlGroup.find(".help-block").first();
 
                         // remove our events
@@ -789,7 +789,7 @@
                 name: "Validemail",
                 type: "regex",
                 regex: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\.[A-Za-z]{2,4}",
-                message: "Not a valid email address<!-- data-validator-validemail-message to override -->"
+                message: "E-mail введён некорректно!<!-- data-validator-validemail-message to override -->"
             },
             passwordagain: {
                 name: "Passwordagain",
