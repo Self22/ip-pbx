@@ -2,7 +2,12 @@ $(document).ready(function () {
     //Slider
     $('.bxslider').bxSlider();
 
-    //$(".header__contacts").animated("flipInY", "fadeOutDown");
+    $(".header__contacts").animated("flipInY", "fadeOutDown");
+    $(".contacts__content").animated("fadeInLeft", "fadeOutDown");
+    $(".contacts__form").animated("fadeInRight", "fadeOutDown");
+    $(".article__header").animated("fadeInUp", "fadeOutDown");
+    $(".superprice").animated("fadeInUpBig", "fadeOutDown");
+   
 
     //Parallax
     $('.parallax-window').parallax({imageSrc: 'img/how_bg.jpg'});

@@ -103,7 +103,7 @@ h3 {
 
 .header {
   margin-top: 100px;
-  height: 300px;
+  height: 370px;
   width: 100%;
   background: rgba(247, 226, 150, 0.5);
   position: relative;
@@ -112,7 +112,7 @@ h3 {
 .header__logo {
   position: absolute;
   left: 5%;
-  top: -14%;
+  top: -11%;
   & h1 {
     padding: 0;
     margin: 0;
@@ -144,7 +144,7 @@ h3 {
     font-size: 23px;
     font-weight: 600;
     right: 0%;
-    top: -23%;
+    top: -18%;
     letter-spacing: 3px;
     width: 327px;
 
@@ -158,6 +158,19 @@ h3 {
       right: 22%;
       z-index: -1;
     }
+  }
+}
+
+.header__slogan {
+  position: absolute;
+  right: 7%;
+  bottom: 0%;
+
+  & p {
+    font-weight: 600;
+    color: rgba(97, 149, 187, 0.9);
+    text-shadow: 2px 1px 6px rgba(0, 0, 0, 0.2);
+    font-size: 42px;
   }
 }
 
@@ -271,7 +284,7 @@ h3 {
 .header__slider {
   position: absolute;
   width: 50%;
-  top: 21%;
+  top: 10%;
   right: 3%;
 }
 
@@ -552,13 +565,17 @@ article {
 
 .gsm_3 {
   margin-left: 37%;
-  font-size: 22px;
+  font-size: 35px;
   font-weight: 600;
-  color: rgba(13, 33, 255, 0.8);
+  color: #454FAA;
+  font-weight: 100;
 }
 
 .superprice {
-  font-size: 20px;
+  margin-left: 10px;
+  display: inline-block;
+  font-size: 30px;
+  color: #454FAA;
 }
 
 .gsm__numbers {
@@ -616,7 +633,7 @@ article {
   background-color: rgba(55, 58, 60, 0.8);
   color: #fbf1cb;
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
 
   & th {
     text-align: center;
@@ -678,6 +695,10 @@ article {
 
   & p {
     font-size: 25px;
+
+    &.fin {
+      margin-bottom: 5px;
+    }
 
     & .post {
       max-width: 400px;

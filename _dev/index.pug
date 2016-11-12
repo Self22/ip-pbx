@@ -9,10 +9,10 @@ html(lang="ru")
         link(rel="stylesheet" href="css/bootstrap.css")
         link(rel="stylesheet" href="css/main.css")
         link(rel="icon" href="img/favicon.ico" type="image/x-icon")
-    body
+    body(id='section1')
         .wrapper
             .header
-                div(class='header__container' id='section1')
+                div(class='header__container')
                     .header__logo
                         h1  ЕВРО-ТЕЛ
                     div(class='header_descr')
@@ -24,7 +24,7 @@ html(lang="ru")
                         nav.main__menu
                             ul
                                 li
-                                    a.nav__link(href="#section1") Виртуальная АТС
+                                    a(class='nav__link current' href="#section1") Виртуальная АТС
                                 li
                                     a.nav__link(href="#section2") Как это работает
                                 li
@@ -35,8 +35,7 @@ html(lang="ru")
                                     a.nav__link(href="#section5") Цены
                                 li
                                     a.nav__link(href="#section6") Контакты
-
-                    div(class='header__contacts animated bounceInLeft')
+                    div(class='header__contacts')
                         address
                             a(href="tel:+380443211022") +38 (044) 32-11-022
                             a(href="tel:+380504544043")  +38 (050) 454-40-43
@@ -56,6 +55,8 @@ html(lang="ru")
                                     strong  16 коп\мин
                             li
                                 div(class='slide slide__multinumbers') Многоканальные мобильные номера
+                    div(class='header__slogan')
+                        p   Лёгкий вход в серъёзную телефонию
             article(class="parallax-window" data-parallax="scroll" data-image-src="img/how_bg.jpg" id='section2')
                 .how__container
                     h2.article__header  Как это работает
@@ -128,7 +129,7 @@ html(lang="ru")
                                 strong  Входящие звонки.
                                 span    По заказу к каналу подключаются существующие или новые многоканальные номера мобильных операторов Украины. Все входящие звонки бесплатные.
                             p   Стоимость канала –
-                                strong.superprice    130 грн. в месяц**
+                                strong(class='superprice')    130 грн. в месяц**
                                 span    (с НДС).
                             p   По умолчанию канал безномерной.
                             p
@@ -293,6 +294,7 @@ html(lang="ru")
                 .contacts__container
                     .contacts__content
                         address
+                            p.fin   Подключение, финансовые вопросы:
                             a(href="tel:+380443211022") +38 (044) 32-11-022
                             br
                             a(href="tel:+380504544043")  +38 (050) 454-40-43
@@ -328,10 +330,12 @@ html(lang="ru")
 
 
 
-    script(type="text/javascript" src="js/jquery.min.js")
+    //script(type="text/javascript" src="js/jquery.min.js")
+    script(type="text/javascript" src="js/jquery-2.1.3.min.js")
     script(type="text/javascript" src="js/jquery.bxslider.min.js")
     script(type="text/javascript" src="js/parallax.min.js")
     script(type="text/javascript" src="js/jqBootstrapValidation.js")
+    script(type="text/javascript" src="js/waypoints.min.js")
     script(type="text/javascript" src="js/animate-css.js")
     script(type="text/javascript" src="js/jquery.singlePageNav.min.js")
     script(type="text/javascript" src="js/main.js")
