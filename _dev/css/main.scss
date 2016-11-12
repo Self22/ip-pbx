@@ -163,14 +163,15 @@ h3 {
 
 .header__slogan {
   position: absolute;
-  right: 7%;
-  bottom: 0%;
+  width: 50%;
+  right: 3%;
+  bottom: 16px;
+  text-align: center;
 
   & p {
-    font-weight: 600;
-    color: rgba(97, 149, 187, 0.9);
-    text-shadow: 2px 1px 6px rgba(0, 0, 0, 0.2);
-    font-size: 42px;
+    font-weight: 100;
+    color: rgba(60, 66, 71, 0.9);;
+    font-size: 34px;
   }
 }
 
@@ -307,6 +308,7 @@ h3 {
   color: black;
   padding-left: 15px;
   padding-right: 15px;
+  font-weight: 600;
 
 
 }
