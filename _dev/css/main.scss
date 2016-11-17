@@ -1,6 +1,9 @@
 //tools
 @import "_misc/mixins";
 @import "_misc/normalize";
+@import "bootstrap.min.css";
+@import "animate.css";
+@import "jquery.bxslider.min.css";
 
 //
 @import "themes/classic";
@@ -26,6 +29,7 @@ body {
 }
 
 html {
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
 
   @include desktop {
@@ -46,6 +50,7 @@ html {
 }
 
 p {
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 20px;
 
   @include desktop {
@@ -65,7 +70,12 @@ p {
   }
 }
 
+.nav > li > a {
+  padding: 0;
+}
+
 h2 {
+  font-family: Gilroy, Arial, sans-serif;
   font-size: rem(32px);
 
   @include phones {
@@ -74,7 +84,9 @@ h2 {
 }
 
 h3 {
+  font-family: Gilroy, Arial, sans-serif;
   font-size: rem(24px);
+  font-weight: 600;
 }
 
 .wrapper {
@@ -99,7 +111,7 @@ h3 {
   //}
   //
   @include phones {
-    padding-top: 10px;
+    padding-top: 0;
   }
 
 
@@ -128,6 +140,7 @@ h3 {
     color: black;
     font-size: rem(60px);
     letter-spacing: 8px;
+    font-weight: 600;
 
     @include phones {
       font-size: 32px;
@@ -135,7 +148,7 @@ h3 {
   }
 
   @include phones {
-    left: 38%;
+    left: 32%;
     top: -13%;
   }
 }
@@ -152,7 +165,13 @@ h3 {
     margin: 0;
     font-size: rem(30px);
     letter-spacing: 2px;
+
+    @include tablets {
+      font-size: 22px;
+      letter-spacing: 0;
+    }
   }
+
 
   @include phones {
     display: none;
@@ -172,8 +191,12 @@ h3 {
     width: 327px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
+    @include tablets {
+      top: -29%;
+    }
+
     @include phones {
-      right: -5%;
+      right: -13%;
       top: -49%;
       width: 260px;
     }
@@ -207,6 +230,14 @@ h3 {
     color: rgba(60, 66, 71, 0.9);;
     font-size: rem(34px);
     letter-spacing: 1px;
+
+    @include tablets {
+      font-size: 25px;
+    }
+  }
+
+  @include tablets {
+    width: 40%;
   }
 
   @include phones {
@@ -302,6 +333,11 @@ h3 {
 
 }
 
+.nav__container-mob {
+  height: 100%;
+  width: 130%;
+}
+
 .nav__mobile {
   display: none;
   top: 2%;
@@ -339,8 +375,9 @@ h3 {
 }
 
 .nav__dropdown {
+  display: none;
   position: absolute;
-  top: 1%;
+  top: 35%;
   padding: 0;
   margin: 0;
   background: rgb(229, 229, 229);
@@ -351,13 +388,13 @@ h3 {
   height: 220px;
   list-style: none;
   font-size: 23px;
-  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 3;
   margin-left: 120%;
   text-align: center;
+  transition: all 1s;
 
   & .current {
     font-weight: 600;
@@ -366,8 +403,8 @@ h3 {
 }
 
 .nav__container {
-  width: 100vw;
-  height: 220px;
+  width: 100%;
+  height: 80px;
 
   &:hover .nav__dropdown {
     display: flex;
@@ -502,6 +539,10 @@ article {
   padding: 10px;
   background: rgba(255, 255, 255, 0.7);
 
+  @include tablets {
+    width: 90%;
+  }
+
   @include phones {
     width: 90%;
   }
@@ -515,15 +556,32 @@ article {
 //functions
 
 .functions {
-  height: 700px;
+  height: 100vh;
+  position: relative;
 
   &::before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 477px;
+    height: 77%;
     bottom: 0;
     z-index: -1;
+
+    @include tablets {
+      display: none;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  @include tablets {
+    height: 800px;
+  }
+
+  @include phones {
+    height: 800px;
   }
 }
 
@@ -534,6 +592,11 @@ article {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 20px;
+
+  @include phones {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .func__list, .func__item {
@@ -546,17 +609,27 @@ article {
 .func__list {
   flex: 2 1 300px;
   text-align: right;
-  margin-top: 35px;
+  margin-top: 22px;
   padding-top: 20px;
   padding-bottom: 25px;
   border-right: 3px solid black;
+  width: 40%;
 
   & li {
 
     position: relative;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     letter-spacing: 1px;
+
+  }
+
+  @include tablets {
+    padding-bottom: 0;
+  }
+
+  @include phones {
+    padding-right: 7%;
 
   }
 }
@@ -579,11 +652,30 @@ article {
     right: 4%;
     z-index: -1;
     transition: 0.5s;
+
+    @include phones {
+      display: none;
+    }
+
   }
 
   & a {
     text-decoration: none;
     color: black;
+
+    & .active {
+      background: black;
+    }
+
+    @include tablets {
+      font-size: 18px;
+      margin-left: 0;
+    }
+
+    @include phones {
+      font-size: 14px;
+      margin-left: 0;
+    }
   }
 
   &:hover {
@@ -609,6 +701,7 @@ article {
     }
 
   }
+
 }
 
 .func__item-active {
@@ -638,31 +731,107 @@ article {
   margin-left: 5%;
   margin-right: 5%;
   position: relative;
+  width: 60%;
 }
 
 .func__descr {
-
   display: none;
   flex-direction: column;
   align-items: center;
   transition: all 1s;
 
   & h3 {
+    position: absolute;
+    top: -6%;
+    left: 10%;
+    right: 10%;
     text-align: center;
     text-transform: uppercase;
     font-size: 32px;
     font-weight: 300;
+
+    @include phones {
+      font-size: 26px;
+    }
   }
 
   & p {
+    margin-top: 10%;
     text-align: justify;
+
+    @include tablets {
+      margin-top: 25%;
+    }
+
+    @include phones {
+      margin-top: 40%;
+    }
   }
+
 }
+
 
 .func__descr-active {
   display: flex;
   transition: all 1s;
 
+}
+
+//bootstrap_functions
+
+.func__container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 78.5vh;
+  position: absolute;
+  bottom: 0%;
+
+  @include tablets {
+    height: 65vh;
+  }
+
+  @include phones {
+    height: 65vh;
+  }
+
+}
+
+.table_tabs-mob1 {
+  flex: 2 1 300px;
+  text-align: right;
+  margin-top: 22px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-right: 3px solid black;
+  width: 40%;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: rem(22px);
+
+  & li {
+    text-align: right;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+
+    & .active a {
+      background: black;
+    }
+  }
+
+}
+
+.tab-content1 {
+  flex: 3 1 400px;
+  margin-top: 17px;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: relative;
+  width: 60%;
 }
 
 .gsm {
@@ -711,6 +880,7 @@ article {
   margin: 0 auto;
   margin-top: 20px;
   padding-top: 15px;
+  margin-bottom: 10px;
 }
 
 .gsm_3 {
@@ -719,6 +889,16 @@ article {
   font-weight: 600;
   color: #454FAA;
   font-weight: 100;
+
+  @include tablets {
+    margin-left: 20%;
+    font-size: 26px;
+  }
+
+  @include phones {
+    margin-left: 12%;
+  }
+
 }
 
 .superprice {
@@ -776,6 +956,26 @@ article {
   }
 }
 
+.table__big {
+  @include tablets {
+    display: none;
+  }
+  @include phones {
+    display: none;
+  }
+}
+
+.table__small {
+  display: none;
+
+  @include tablets {
+    display: block;
+  }
+  @include phones {
+    display: block;
+  }
+}
+
 .table__price {
   margin: 0 auto;
   margin-top: 40px;
@@ -814,6 +1014,58 @@ article {
 .second__col, .third__col, .fourth__col, .fifth__col {
   width: 15%;
 }
+
+.price__mob {
+  margin: 40px auto 0;
+  width: 100%;
+}
+
+.nav-tabs > li > a {
+  line-height: 40px;
+}
+
+.fade {
+  transition: opacity .5s linear;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid rgba(55, 58, 60, .8);
+}
+
+.table_tabs-mob {
+  background: rgba(55, 58, 60, .8);
+  font-size: rem(18px);
+  font-weight: 600;
+
+  & li {
+    width: 25%;
+    text-align: center;
+    height: 40px;
+
+  }
+
+  & a {
+    color: #fbf1cb;
+    padding: 0;
+    text-transform: uppercase;
+    height: 100%;
+
+  }
+}
+
+.table_price-mob {
+  background: rgba(55, 58, 60, .8);
+  font-size: rem(20px);
+  font-weight: 600;
+  width: 100%;
+
+  & th {
+    text-transform: none;
+    color: #fbf1cb;
+  }
+
+}
+
 
 //contacts
 
@@ -882,6 +1134,10 @@ article {
     display: block;
     margin: 0 auto;
     margin-top: 30px;
+
+    @include tablets {
+      width: 60%;
+    }
   }
 }
 

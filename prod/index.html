@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Виртуальные АТС от Евро-тел | Облачные АТС Украина">
+    <meta name="description"
+          content="Виртуальные АТС от Евро-тел: доступный для всех вход в IP-телефонию. Звонки на мобильные по 10 коп. Облачная АТС с рабочими местами на смартфонах.">
+    <meta name="keywords"
+          content="ip телефония, виртуальная АТС, sip телефония, мини АТС, запись телефонных разговоров, ip телефония киев, ip телефония украина,voip телефония, voip атс, ip телефония для офиса, мини атс купить, облачная атс, купить АТС, sip телефония киев">
     <title>  Виртуальная АТС Евро-тел | Облачная АТС Евро-тел</title>
-    <link rel="stylesheet" href="css/jquery.bxslider.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   </head>
@@ -36,7 +38,7 @@
               </ul>
             </nav>
             <nav class="nav__mobile">
-              <div class="nav__container">
+              <div class="nav__container-mob">
                 <div class="nav__lines">
                   <p>  _</p>
                   <p>  _</p>
@@ -98,51 +100,60 @@
       <article class="functions" id="section3">
         <h2 class="article__header"> Функции АТС</h2>
         <div class="func__background"></div>
-        <div class="func__container">
-          <ul class="func__list">
-            <li class="func__item func__item-active"><a class="func__linc" href="#">Голосовое меню</a></li>
-            <li class="func__item"><a class="func__linc" href="#">   Статистика и запись</a></li>
-            <li class="func__item"><a class="func__linc" href="#">   Сall-back</a></li>
-            <li class="func__item"><a class="func__linc" href="#">   Переадресация входящих</a></li>
-            <li class="func__item"><a class="func__linc" href="#">   Организация очередей</a></li>
-            <li class="func__item"><a class="func__linc" href="#">   Обратный звонок</a></li>
-            <li class="func__item"><a class="func__linc" href="#">   Факс / E-mail</a></li>
-            <li class="func__item"><a class="func__linc" href="#">   Интеграция с CRM</a></li>
+        <div class="func__container2">
+          <ul class="table_tabs-mob1">
+            <li class="func__item func__item-active" role="presentation"><a class="func__linc" href="#voice"
+                                                                            aria-controls="voice" role="tab"
+                                                                            data-toggle="tab"> Голосовое меню</a></li>
+            <li class="func__item" role="presentation"><a class="func__linc" href="#stat" aria-controls="stat"
+                                                          role="tab" data-toggle="tab"> Статистика и запись</a></li>
+            <li class="func__item" role="presentation"><a class="func__linc" href="#callback" aria-controls="callback"
+                                                          role="tab" data-toggle="tab"> Сall-back</a></li>
+            <li class="func__item" role="presentation"><a class="func__linc" href="#incom" aria-controls="incom"
+                                                          role="tab" data-toggle="tab"> Переадресация входящих</a></li>
+            <li class="func__item" role="presentation"><a class="func__linc" href="#queue" aria-controls="queue"
+                                                          role="tab" data-toggle="tab"> Организация очередей</a></li>
+            <li class="func__item" role="presentation"><a class="func__linc" href="#return" aria-controls="return"
+                                                          role="tab" data-toggle="tab"> Обратный звонок</a></li>
+            <li class="func__item" role="presentation"><a class="func__linc" href="#fax" aria-controls="fax" role="tab"
+                                                          data-toggle="tab"> Факс / E-mail</a></li>
+            <li class="func__item" role="presentation"><a class="func__linc func__linc" href="#crm" aria-controls="crm"
+                                                          role="tab" data-toggle="tab"> Интеграция с CRM</a></li>
           </ul>
-          <ul class="func__content">
-            <li class="func__descr func__descr-active">
+          <div class="tab-content tab-content1">
+            <div class="tab-pane func__descr fade in active" role="tabpanel" id="voice">
               <h3 class="func__descr-title">   Голосовое меню</h3>
               <p>  При звонке в колл-центр Ваш клиент будет перенаправлен на голосовое меню, в котором он услышит дополнительную информацию или ему будет предложено сделать выбор.</p>
-            </li>
-            <li class="func__descr">
+            </div>
+            <div class="tab-pane fade func__descr" role="tabpanel" id="stat">
               <h3 class="func__descr-title">   Статистика и запись</h3>
               <p>  Статистика всех входящих и исходящих звонков (журнал звонков) с возможностью прослушать запись разговоров или увидеть не принятые звонки.</p>
-            </li>
-            <li class="func__descr">
+            </div>
+            <div class="tab-pane fade func__descr" role="tabpanel" id="callback">
               <h3 class="func__descr-title">   Сall-back</h3>
               <p>  В случае невозможности ответить на входящий звонок, звонящему будет предложено нажать цифру 1 и положить трубку. После этого к вам на электронную почту прийдет письмо с номером звонившего абонента.</p>
-            </li>
-            <li class="func__descr">
+            </div>
+            <div class="tab-pane fade func__descr" role="tabpanel" id="incom">
               <h3 class="func__descr-title">   Переадресация входящих</h3>
               <p>  Если внутренний номер на который пришел звонок занят, не отвечает или отключен, то вызов можно переадресовать на другой стационарный или моб. телефон. Часто используется как резервный канал при отсутствии в офисе связи.</p>
-            </li>
-            <li class="func__descr">
+            </div>
+            <div class="tab-pane fade func__descr" role="tabpanel" id="queue">
               <h3 class="func__descr-title">   Организация очередей</h3>
               <p>  Звонящий абонент может ожидать соединения в виртуальной очереди. Время ожидания и текстовые сообщения, звучащие во время ожидания, согласовываются заказчиком.</p>
-            </li>
-            <li class="func__descr">
+            </div>
+            <div class="tab-pane fade func__descr" role="tabpanel" id="return">
               <h3 class="func__descr-title">   Обратный звонок</h3>
               <p>  Во время исходящего звонка вашему клиенту у него высвечивается некий номер мобильного телефона….? Связка клиент-менеджер Клиент может позвонить на него в любое время и попадет к вам в колцентр именно к оператору, который последним звонил ему.</p>
-            </li>
-            <li class="func__descr">
+            </div>
+            <div class="tab-pane fade func__descr" role="tabpanel" id="fax">
               <h3 class="func__descr-title">   Факс / E-mail</h3>
               <p>  Вы сможете принимать адресованные в вашу компанию факсимильные сообщения прямо на e-mail уже в виде готового прикрепленного файла</p>
-            </li>
-            <li class="func__descr">
+            </div>
+            <div class="tab-pane fade func__descr" role="tabpanel" id="crm">
               <h3 class="func__descr-title">   Интеграция с CRM</h3>
               <p>  На сегодня реализована возможность интеграции виртуальной АТС с CRM-системами 1С-Битрикс, Битрикс 24, AMO-CRM.</p>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </article>
       <article class="gsm" id="section4">
@@ -184,8 +195,9 @@
       </article>
       <article class="price" id="section5">
         <h2 class="article__header">Цены</h2>
-        <table class="table table__price">
-          <thead>
+        <div class="table-responsive table__big">
+          <table class="table table__price">
+            <thead>
             <tr>
               <th class="first__col"> Название пакета</th>
               <th class="second__col"> Free</th>
@@ -193,8 +205,8 @@
               <th class="fourth__col"> Бизнес</th>
               <th class="fifth__col"> Гранд</th>
             </tr>
-          </thead>
-          <tbody>
+            </thead>
+            <tbody>
             <tr>
               <th scope="row">Внутренние номера</th>
               <td> 1</td>
@@ -286,8 +298,270 @@
               <td> 150 грн.</td>
               <td> 199 грн.</td>
             </tr>
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
+        <div class="price__mob table__small">
+          <ul class="nav nav-tabs table_tabs-mob">
+            <li class="active" role="presentation"><a href="#free" aria-controls="free" role="tab" data-toggle="tab">
+              Free</a></li>
+            <li role="presentation"><a href="#neofit" aria-controls="neofit" role="tab" data-toggle="tab"> Начальная</a>
+            </li>
+            <li role="presentation"><a href="#business" aria-controls="business" role="tab" data-toggle="tab">
+              Бизнес</a></li>
+            <li role="presentation"><a href="#grand" aria-controls="grand" role="tab" data-toggle="tab"> Гранд</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade in active" role="tabpanel" id="free">
+              <div class="table-responsive">
+                <table class="table table__price table_price-mob">
+                  <thead>
+                  <tr>
+                    <th class="first__col-mob"> Внутренние номера</th>
+                    <th class="second__col-mob"> 1</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <th scope="row">Внешние номера</th>
+                    <td> 1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Входящие каналы</th>
+                    <td> 1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Исходящие каналы</th>
+                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Бесплатные звонки на 044</th>
+                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Статистика звонков</th>
+                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Аудиозапись всех разговоров</th>
+                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Переадресация звонков</th>
+                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Интерактивное голосовое меню (IVR)</th>
+                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Интеграция с Битрикс24</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Привязка "Клиент-Сотрудник"</th>
+                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Call Me - виджет звонка c сайта</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr class="tr__price">
+                    <th scope="row">Ежемесячно</th>
+                    <td> 0 грн.</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="neofit">
+              <div class="table-responsive">
+                <table class="table table__price table_price-mob">
+                  <thead>
+                  <tr>
+                    <th class="first__col-mob"> Внутренние номера</th>
+                    <th class="second__col-mob"> 5</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <th scope="row">Внешние номера</th>
+                    <td> До 3-х</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Входящие каналы</th>
+                    <td> До 3-х</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Исходящие каналы</th>
+                    <td> До 3-х</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Бесплатные звонки на 044</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Статистика звонков</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Аудиозапись всех разговоров</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Переадресация звонков</th>
+                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Интерактивное голосовое меню (IVR)</th>
+                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Интеграция с Битрикс24</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Привязка "Клиент-Сотрудник"</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Call Me - виджет звонка c сайта</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr class="tr__price">
+                    <th scope="row">Ежемесячно</th>
+                    <td> 99 грн.</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="business">
+              <div class="table-responsive">
+                <table class="table table__price table_price-mob">
+                  <thead>
+                  <tr>
+                    <th class="first__col-mob"> Внутренние номера</th>
+                    <th class="second__col-mob"> 10</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <th scope="row">Внешние номера</th>
+                    <td> До 6-ти</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Входящие каналы</th>
+                    <td> До 6-ти</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Исходящие каналы</th>
+                    <td> До 6-ти</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Бесплатные звонки на 044</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Статистика звонков</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Аудиозапись всех разговоров</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Переадресация звонков</th>
+                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Интерактивное голосовое меню (IVR)</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Интеграция с Битрикс24</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Привязка "Клиент-Сотрудник"</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Call Me - виджет звонка c сайта</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr class="tr__price">
+                    <th scope="row">Ежемесячно</th>
+                    <td> 199 грн.</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="grand">
+              <div class="table-responsive">
+                <table class="table table__price table_price-mob">
+                  <thead>
+                  <tr>
+                    <th class="first__col-mob"> Внутренние номера</th>
+                    <th class="second__col-mob"> Не ограничено</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <th scope="row">Внешние номера</th>
+                    <td> Не ограничено</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Входящие каналы</th>
+                    <td> Не ограничено</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Исходящие каналы</th>
+                    <td> Не ограничено</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Бесплатные звонки на 044</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Статистика звонков</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Аудиозапись всех разговоров</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Переадресация звонков</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Интерактивное голосовое меню (IVR)</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Интеграция с Битрикс24</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Привязка "Клиент-Сотрудник"</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Call Me - виджет звонка c сайта</th>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr class="tr__price">
+                    <th scope="row">Ежемесячно</th>
+                    <td> 199 грн.</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </article>
       <article class="contacts" id="section6">
         <h2 class="article__header"> Контакты</h2>
@@ -327,7 +601,7 @@
   <script type="text/javascript" src="js/parallax.min.js"></script>
   <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
   <script type="text/javascript" src="js/waypoints.min.js"></script>
-  <script type="text/javascript" src="js/animate-css.js"></script>
   <script type="text/javascript" src="js/jquery.singlePageNav.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </html>
