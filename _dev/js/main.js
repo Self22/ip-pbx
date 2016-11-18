@@ -1,6 +1,16 @@
+
 if (window.screen.width > 800) {
     document.write('<script type="text/javascript" src="js/animate-css.js"><\/script>');
 }
+
+$(document).ready(function () {
+
+    $('.nav__container').on('click', function (e) {
+            $('.nav__dropdown').fadeIn(500).fadeOut(3000);
+        }
+    )
+
+});
 
 $(document).ready(function () {
     //Slider

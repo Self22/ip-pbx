@@ -117,6 +117,10 @@ h3 {
 
 }
 
+.hidden {
+  display: none;
+}
+
 .header {
   margin-top: 100px;
   height: 370px;
@@ -336,6 +340,7 @@ h3 {
 .nav__container-mob {
   height: 100%;
   width: 130%;
+
 }
 
 .nav__mobile {
@@ -406,9 +411,9 @@ h3 {
   width: 100%;
   height: 80px;
 
-  &:hover .nav__dropdown {
-    display: flex;
-  }
+  //&:hover .nav__dropdown {
+  //  display: flex;
+  //}
 }
 
 .header__contacts {
@@ -642,6 +647,10 @@ article {
   margin-left: 15%;
   transition: background 1s;
 
+  @include phones {
+    margin-left: 0;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -655,6 +664,7 @@ article {
 
     @include phones {
       display: none;
+
     }
 
   }
@@ -756,14 +766,17 @@ article {
   }
 
   & p {
+    font-size: 22px;
     margin-top: 10%;
     text-align: justify;
 
     @include tablets {
+      font-size: 20px;
       margin-top: 25%;
     }
 
     @include phones {
+      font-size: 14px;
       margin-top: 40%;
     }
   }
@@ -955,6 +968,30 @@ article {
     background-color: rgba(55, 58, 60, 0.6);
   }
 }
+
+.price__descr {
+  text-align: center;
+  margin-top: 45px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.additional_serv-table {
+  margin: 40px auto 0;
+  width: 85%;
+  background-color: rgba(55, 58, 60, .8);
+  color: #fbf1cb;
+  font-size: rem(22px);
+
+  & thead {
+    text-transform: uppercase;
+    text-align: center;
+    color: #eaeaff;
+  }
+
+}
+
 
 .table__big {
   @include tablets {
