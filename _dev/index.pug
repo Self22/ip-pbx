@@ -3,13 +3,15 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="title", content="Виртуальные АТС от Евро-тел | Облачные АТС Украина")
+        meta(name="description" content="Виртуальные АТС от Евро-тел: доступный для всех вход в IP-телефонию. Звонки на мобильные по 10 коп. Облачная АТС с рабочими местами на смартфонах.")
+        meta(name="keywords" content="ip телефония, виртуальная АТС, sip телефония, мини АТС, запись телефонных разговоров, ip телефония киев, ip телефония украина,voip телефония, voip атс, ip телефония для офиса, мини атс купить, облачная атс, купить АТС, sip телефония киев")
         title   Виртуальная АТС Евро-тел | Облачная АТС Евро-тел
-        link(rel="stylesheet" href="css/jquery.bxslider.min.css")
-        link(rel="stylesheet" href="css/animate.css")
-        link(rel="stylesheet" href="css/bootstrap.css")
         link(rel="stylesheet" href="css/main.css")
         link(rel="icon" href="img/favicon.ico" type="image/x-icon")
     body(id='section1')
+        .loader
+            .loader_inner
         .wrapper
             .header
                 div(class='header__container')
@@ -24,7 +26,26 @@ html(lang="ru")
                         nav.main__menu
                             ul
                                 li
-                                    a(class='nav__link current' href="#section1") Виртуальная АТС
+                                    a(class='nav__link current' href="#section1") Евро-тел
+                                li
+                                    a.nav__link(href="#section2") Как это работает
+                                li
+                                    a.nav__link(href="#section3") Функции
+                                li
+                                    a.nav__link(href="#section4") GSM
+                                li
+                                    a.nav__link(href="#section5") Цены
+                                li
+                                    a.nav__link(href="#section6") Контакты
+                        nav.nav__mobile
+                            .nav__container-mob
+                                .nav__lines
+                                    p   _
+                                    p   _
+                                    p   _
+                            ul.nav__dropdown
+                                li
+                                    a(class='nav__link current' href="#section1") Евро-тел
                                 li
                                     a.nav__link(href="#section2") Как это работает
                                 li
@@ -45,7 +66,7 @@ html(lang="ru")
                             li
                                 div(class="slide slide__gsm")   Дорого покупать GSM-шлюз?
                             li
-                                div(class='slide slide__card')    Надоело возиться с  карточками?
+                                div(class='slide slide__card')    Надоело возиться с  SIM-карточками?
                             li
                                 div(class='slide slide__desicions') Наши решения проще и дешевле!
                             li
@@ -56,69 +77,77 @@ html(lang="ru")
                             li
                                 div(class='slide slide__multinumbers') Многоканальные мобильные номера
                     div(class='header__slogan')
-                        p   Лёгкий вход в серъёзную телефонию
+                        p   Лёгкий вход в "серъёзную" телефонию
             article(class="parallax-window" data-parallax="scroll" data-image-src="img/how_bg.jpg" id='section2')
                 .how__container
                     h2.article__header  Как это работает
                     .how__descr
                         p.main__content Виртуальная АТС работает так же, как и офисная, но не привязана к месту расположения или оборудованию. Пользователю  АТС
                             strong  необходим только смартфон (или компьютер) + Интернет
-                            span    , при этом все пользователи могут находиться территориально в одном в офисе или разбросаны по разным городам. Связь осуществляется при помощи программы на смартфоне или компьютере (поставляется с уже предустановленными настройками, ничего настраивать не придётся!)
+                            span    , при этом все пользователи могут находиться территориально в одном офисе или разбросаны по разным городам. Связь осуществляется при помощи программы на смартфоне или компьютере (поставляется с уже предустановленными настройками, ничего настраивать не придётся!)
                         p.main__content Сама АТС находится удалённо на нашем сервере и функционально настраивается под Ваши потребности.
-                        p.main__content Для связи между сотрудниками АТС используются внутренние номера (111, 112, 113...)
-                        p.main__content Для входящих\исходящих звонков на номера мобильных GSM операторов Украины по Вашей заявке к АТС подключаются наши каналы с номерами.
-                        p.main__content Для входящих\исходящих звонков на номера фиксированной связи Украины по отдельному заказу к АТС подключаются SIP-каналы украинских операторов фиксированной связи (Интертелеком, Датагрупп, Вегателеком).
+                        p.main__content
+                            strong  Для связи между сотрудниками
+                            span    АТС используются внутренние номера (111, 112, 113...)
+                        p.main__content
+                            strong  Для входящих\исходящих звонков на номера мобильных
+                            span    GSM операторов Украины по Вашей заявке к АТС подключаются наши
+                            a(href='#section4')  каналы с номерами.
+                        p.main__content
+                            strong  Для входящих\исходящих звонков на номера фиксированной связи
+                            span    Украины по отдельному заказу к АТС подключаются SIP-каналы украинских операторов фиксированной связи (Интертелеком, Датагрупп, Вегателеком).
             article(class='functions' id='section3')
                 h2.article__header  Функции АТС
                 .func__background
-                .func__container
-                    ul.func__list
-                        li(class='func__item func__item-active')
-                            a.func__linc(href='#') Голосовое меню
-                        li.func__item
-                            a.func__linc(href='#')    Статистика и запись
-                        li.func__item
-                            a.func__linc(href='#')    Сall-back
-                        li.func__item
-                            a.func__linc(href='#')    Переадресация входящих
-                        li.func__item
-                            a.func__linc(href='#')    Организация очередей
-                        li.func__item
-                            a.func__linc(href='#')    Обратный звонок
-                        li.func__item
-                            a.func__linc(href='#')    Факс / E-mail
-                        li.func__item
-                            a.func__linc(href='#')    Интеграция с CRM
-                    ul.func__content
-                        li(class='func__descr func__descr-active')
+                .func__container2
+                    ul(class="table_tabs-mob1" )
+                        li(role="presentation" class="func__item func__item-active")
+                            a(href="#voice" aria-controls="voice" role="tab" data-toggle="tab" class='func__linc' )   Голосовое меню
+                        li(role="presentation" class="func__item")
+                            a(href="#stat" aria-controls="stat" role="tab" data-toggle="tab" class='func__linc')   Статистика и запись
+                        li(role="presentation" class="func__item")
+                            a(href="#callback" aria-controls="callback" role="tab" data-toggle="tab" class='func__linc')   Сall-back
+                        li(role="presentation" class="func__item")
+                            a(href="#incom" aria-controls="incom" role="tab" data-toggle="tab" class='func__linc')   Переадресация входящих
+                        li(role="presentation" class="func__item")
+                            a(href="#queue" aria-controls="queue" role="tab" data-toggle="tab" class='func__linc')   Организация очередей
+                        li(role="presentation" class="func__item")
+                            a(href="#return" aria-controls="return" role="tab" data-toggle="tab" class='func__linc')   Обратный звонок
+                        li(role="presentation" class="func__item")
+                            a(href="#fax" aria-controls="fax" role="tab" data-toggle="tab" class='func__linc')   Факс &#8594; E-mail
+                        li(role="presentation" class="func__item")
+                            a(href="#crm" aria-controls="crm" role="tab" data-toggle="tab" class='func__linc' class='func__linc')   Интеграция с CRM
+
+                    div(class="tab-content tab-content1")
+                        div(role="tabpanel" class="tab-pane func__descr fade in active" id="voice")
                             h3.func__descr-title    Голосовое меню
-                            p   При звонке в колл-центр Ваш клиент будет перенаправлен на голосовое меню, в котором он услышит дополнительную информацию или ему будет предложено сделать выбор.
-                        li.func__descr
+                            p   При звонке в колл-центр Ваш клиент будет перенаправлен на голосовое меню, в котором он услышит дополнительную информацию. Гармонично подобранное музыкальное сопровождение, голос диктора и продуманный текст создаст благоприятное впечатление от звонка в организацию. Маршрутизация, выполняемая с помощью IVR-системы, обеспечивает правильную загрузку операторов продуктов и услуг компании.
+                        div(role="tabpanel" class="tab-pane fade func__descr" id="stat")
                             h3.func__descr-title    Статистика и запись
-                            p   Статистика всех входящих и исходящих звонков (журнал звонков) с возможностью прослушать запись разговоров или увидеть не принятые звонки.
-                        li.func__descr
+                            p   Статистика всех входящих и исходящих звонков (журнал звонков) с возможностью прослушать запись разговоров или просмотреть непринятые звонки. Эффективность телефонных звонков - главное, вокруг чего строится наш сервис. Удобная история и статистика позволяют контроливать ваши телефонные продажи, пропущенные звонки и отслеживать разговоры с новыми клиентами.
+                        div(role="tabpanel" class="tab-pane fade func__descr" id="callback")
                             h3.func__descr-title    Сall-back
-                            p   В случае невозможности ответить на входящий звонок, звонящему будет предложено нажать цифру 1 и положить трубку. После этого к вам на электронную почту прийдет письмо с номером звонившего абонента.
-                        li.func__descr
+                            p   В случае невозможности ответить на входящий звонок, звонящему будет предложено нажать цифру 1 и положить трубку. После этого к вам на электронную почту прийдет письмо с номером звонившего абонента. Правда, удобно?
+                        div(role="tabpanel" class="tab-pane fade func__descr" id="incom")
                             h3.func__descr-title    Переадресация входящих
-                            p   Если внутренний номер на который пришел звонок занят, не отвечает или отключен, то вызов можно переадресовать на другой стационарный или моб. телефон. Часто используется как резервный канал при отсутствии в офисе связи.
-                        li.func__descr
+                            p   Если номер, на который Вам позвонили, занят, не отвечает или отключен, то вызов можно переадресовать на другой стационарный или мобильный телефон. Эта функция часто используется как резервный канал при неполадках в связи. Для использовани ятребуется подключение внешнего SIP-транка оператора фиксированной телефонной связи.
+                        div(role="tabpanel" class="tab-pane fade func__descr" id="queue")
                             h3.func__descr-title    Организация очередей
-                            p   Звонящий абонент может ожидать соединения в виртуальной очереди. Время ожидания и текстовые сообщения, звучащие во время ожидания, согласовываются заказчиком.
-                        li.func__descr
+                            p   Звонящий абонент может ожидать соединения в виртуальной очереди. Время ожидания и текстовые сообщения, звучащие во время ожидания, согласовываются заказчиком. Чаще всего эту функцию используют при работе Call-центров и компаний с большим ежедневным входящим траффиком звонков. Очередь звонков призвана удержать всех позвонивших в организацию клиентов, когда менеджеры заняты (ведут беседу с другим клиентом) или временно недоступны.
+                        div(role="tabpanel" class="tab-pane fade func__descr" id="return")
                             h3.func__descr-title    Обратный звонок
-                            p   Во время исходящего звонка вашему клиенту у него высвечивается некий номер мобильного телефона….? Связка клиент-менеджер Клиент может позвонить на него в любое время и попадет к вам в колцентр именно к оператору, который последним звонил ему.
-                        li.func__descr
-                            h3.func__descr-title    Факс / E-mail
-                            p   Вы сможете принимать адресованные в вашу компанию факсимильные сообщения прямо на e-mail уже в виде готового прикрепленного файла
-                        li.func__descr
+                            p   Во время исходящего звонка вашему клиенту у него определяется номер мобильного телефона? Клиент может позвонить на него в любое время и попадет на Вашу АТС - именно к тому оператору, который последним звонил ему. Таким образом мы реализовали уникальную связку Клиент-Менеджер: по исследованиям маркетологов, связываясь с персональным менеджером напрямую, клиент чувствует себя более особенным.
+                        div(role="tabpanel" class="tab-pane fade func__descr" id="fax")
+                            h3.func__descr-title    Факс &#8594; E-mail
+                            p   Вы сможете принимать адресованные в вашу компанию факсимильные сообщения прямо на e-mail уже в виде готового прикрепленного файла.
+                        div(role="tabpanel" class="tab-pane fade func__descr" id="crm")
                             h3.func__descr-title    Интеграция с CRM
-                            p   На сегодня реализована возможность интеграции виртуальной АТС с CRM-системами 1С-Битрикс, Битрикс 24, AMO-CRM.
+                            p   Интеграция CRM-систем и телефонии не только "модная" тенденция, но и реально эффективное решение. Автоматическое открытие карточки клиента при звонке с выводом информации о нем снижает время обработки запроса, звонки одним кликом в считанные секунды соединят с клиентом, статистика вызовов и  записи разговоров прямо из CRM отобразят всю картину руководтству.На сегодня реализована возможность интеграции виртуальной АТС с CRM-системами 1С-Битрикс, Битрикс 24, AMO-CRM.
             article(class='gsm' id='section4')
                 h2.article__header GSM звонки
                 .gsm__container
                     .gsm__intro
-                        p   Для приёма звонков с мобильных номеров и совершения звонков на мобильные номера Украины в наших АТС используются каналы IP-телефонии (один канал используется для одного разговора).
+                        p   Для приёма многоканальных звонков с мобильных номеров и совершения звонков на мобильные номера Украины в наших АТС используются каналы IP-телефонии (один канал используется для одного разговора).
                     .gsm__universal
                         h3.gsm__title  Канал "Универсальный" (вх\исх)
                         .gsm__descr
@@ -169,126 +198,368 @@ html(lang="ru")
                             em  * Особенность номеров Lifecell: по условиям оператора стоимость каждого факта входящего звонка в каналах IP-телефонии составляет 22 коп. Оплата за звонки текущего месяца учитывается в счёте следующего месяца.
             article(class='price' id='section5')
                 h2.article__header Цены
-                table(class="table table__price")
+                h3.price__descr Пакеты АТС
+                div(class='table-responsive table__big')
+                    table(class="table table__price")
+                        thead
+                            tr
+                                th.first__col  Название пакета
+                                th.second__col  Free
+                                th.third__col  Начальная
+                                th.fourth__col  Бизнес
+                                th.fifth__col  Гранд
+                        tbody
+                            tr
+                                th(scope='row') Внутренние номера
+                                td  1
+                                td  5
+                                td  10
+                                td  Не ограничено
+                            tr
+                                th(scope="row") Внешние номера
+                                td  1
+                                td  До 3-х
+                                td  До 6-ти
+                                td  Не ограничено
+                            tr
+                                th(scope="row") Входящие каналы
+                                td  1
+                                td  До 3-х
+                                td  До 6-ти
+                                td  Не ограничено
+                            tr
+                                th(scope="row") Исходящие каналы
+                                td
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                td  До 3-х
+                                td  До 6-ти
+                                td  Не ограничено
+                            tr
+                                th(scope="row") Бесплатные звонки на 044
+                                td
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            tr
+                                th(scope="row") Статистика звонков
+                                td
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            tr
+                                th(scope="row") Аудиозапись всех разговоров
+                                td
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            tr
+                                th(scope="row") Переадресация звонков
+                                td
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            tr
+                                th(scope="row") Интерактивное голосовое меню (IVR)
+                                td
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            tr
+                                th(scope="row") Интеграция с Битрикс24
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            tr
+                                th(scope="row") Привязка "Клиент-Сотрудник"
+                                td
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            tr
+                                th(scope="row") Call Me - виджет звонка c сайта
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                td
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            tr(class='tr__price')
+                                th(scope="row") Ежемесячно
+                                td  0 грн.
+                                td  99 грн.
+                                td  150 грн.
+                                td  199 грн.
+                div(class='price__mob table__small')
+
+                    ul(class="nav nav-tabs table_tabs-mob" )
+                        li(role="presentation" class="active")
+                            a(href="#free" aria-controls="free" role="tab" data-toggle="tab")   Free
+                        li(role="presentation")
+                            a(href="#neofit" aria-controls="neofit" role="tab" data-toggle="tab")   Начальная
+                        li(role="presentation")
+                            a(href="#business" aria-controls="business" role="tab" data-toggle="tab")   Бизнес
+                        li(role="presentation")
+                            a(href="#grand" aria-controls="grand" role="tab" data-toggle="tab")   Гранд
+                    div(class="tab-content")
+                        div(role="tabpanel" class="tab-pane fade in active" id="free")
+                            .table-responsive
+                                table(class="table table__price table_price-mob")
+                                    thead
+                                        tr
+                                            th.first__col-mob  Внутренние номера
+                                            th.second__col-mob  1
+                                    tbody
+                                        tr
+                                            th(scope="row") Внешние номера
+                                            td  1
+                                        tr
+                                            th(scope="row") Входящие каналы
+                                            td  1
+                                        tr
+                                            th(scope="row") Исходящие каналы
+                                            td
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Бесплатные звонки на 044
+                                            td
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Статистика звонков
+                                            td
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Аудиозапись всех разговоров
+                                            td
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Переадресация звонков
+                                            td
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Интерактивное голосовое меню (IVR)
+                                            td
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Интеграция с Битрикс24
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Привязка "Клиент-Сотрудник"
+                                            td
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Call Me - виджет звонка c сайта
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr(class='tr__price')
+                                            th(scope="row") Ежемесячно
+                                            td  0 грн.
+
+                        div(role="tabpanel" class="tab-pane fade" id="neofit")
+                            .table-responsive
+                                table(class="table table__price table_price-mob")
+                                    thead
+                                        tr
+                                            th.first__col-mob  Внутренние номера
+                                            th.second__col-mob  5
+                                    tbody
+                                        tr
+                                            th(scope="row") Внешние номера
+                                            td  До 3-х
+                                        tr
+                                            th(scope="row") Входящие каналы
+                                            td  До 3-х
+                                        tr
+                                            th(scope="row") Исходящие каналы
+                                            td  До 3-х
+                                        tr
+                                            th(scope="row") Бесплатные звонки на 044
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Статистика звонков
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Аудиозапись всех разговоров
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Переадресация звонков
+                                            td
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Интерактивное голосовое меню (IVR)
+                                            td
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Интеграция с Битрикс24
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Привязка "Клиент-Сотрудник"
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Call Me - виджет звонка c сайта
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr(class='tr__price')
+                                            th(scope="row") Ежемесячно
+                                            td  99 грн.
+                        div(role="tabpanel" class="tab-pane fade" id="business")
+                            .table-responsive
+                                table(class="table table__price table_price-mob")
+                                    thead
+                                        tr
+                                            th.first__col-mob  Внутренние номера
+                                            th.second__col-mob  10
+                                    tbody
+                                        tr
+                                            th(scope="row") Внешние номера
+                                            td  До 6-ти
+                                        tr
+                                            th(scope="row") Входящие каналы
+                                            td  До 6-ти
+                                        tr
+                                            th(scope="row") Исходящие каналы
+                                            td  До 6-ти
+                                        tr
+                                            th(scope="row") Бесплатные звонки на 044
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Статистика звонков
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Аудиозапись всех разговоров
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Переадресация звонков
+                                            td
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Интерактивное голосовое меню (IVR)
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Интеграция с Битрикс24
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Привязка "Клиент-Сотрудник"
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Call Me - виджет звонка c сайта
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr(class='tr__price')
+                                            th(scope="row") Ежемесячно
+                                            td  199 грн.
+                        div(role="tabpanel" class="tab-pane fade" id="grand")
+                            .table-responsive
+                                table(class="table table__price table_price-mob")
+                                    thead
+                                        tr
+                                            th.first__col-mob  Внутренние номера
+                                            th.second__col-mob  Не ограничено
+                                    tbody
+                                        tr
+                                            th(scope="row") Внешние номера
+                                            td  Не ограничено
+                                        tr
+                                            th(scope="row") Входящие каналы
+                                            td  Не ограничено
+                                        tr
+                                            th(scope="row") Исходящие каналы
+                                            td  Не ограничено
+                                        tr
+                                            th(scope="row") Бесплатные звонки на 044
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Статистика звонков
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Аудиозапись всех разговоров
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Переадресация звонков
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Интерактивное голосовое меню (IVR)
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Интеграция с Битрикс24
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Привязка "Клиент-Сотрудник"
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr
+                                            th(scope="row") Call Me - виджет звонка c сайта
+                                            td
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        tr(class='tr__price')
+                                            th(scope="row") Ежемесячно
+                                            td  199 грн.
+                h3.price__descr    Дополнительные услуги
+                table(class="table additional_serv-table")
                     thead
                         tr
-                            th.first__col  Название пакета
-                            th.second__col  Free
-                            th.third__col  Начальная
-                            th.fourth__col  Бизнес
-                            th.fifth__col  Гранд
+                            th.serv__col  Название услуги
+                            th.price__col  Цена
                     tbody
                         tr
-                            th(scope='row') Внутренние номера
-                            td  1
-                            td  5
-                            td  10
-                            td  Не ограничено
+                            th(scope='row') Подключение к АТС SIP-транка с фиксированной телефонной связью
+                            td  130 грн.
                         tr
-                            th(scope="row") Внешние номера
-                            td  1
-                            td  До 3-х
-                            td  До 6-ти
-                            td  Не ограничено
-                        tr
-                            th(scope="row") Входящие каналы
-                            td  1
-                            td  До 3-х
-                            td  До 6-ти
-                            td  Не ограничено
-                        tr
-                            th(scope="row") Исходящие каналы
-                            td
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            td  До 3-х
-                            td  До 6-ти
-                            td  Не ограничено
-                        tr
-                            th(scope="row") Бесплатные звонки на 044
-                            td
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                        tr
-                            th(scope="row") Статистика звонков
-                            td
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                        tr
-                            th(scope="row") Аудиозапись всех разговоров
-                            td
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                        tr
-                            th(scope="row") Переадресация звонков
-                            td
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                        tr
-                            th(scope="row") Интерактивное голосовое меню (IVR)
-                            td
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                        tr
-                            th(scope="row") Интеграция с Битрикс24
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                        tr
-                            th(scope="row") Привязка "Клиент-Сотрудник"
-                            td
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                        tr
-                            th(scope="row") Call Me - виджет звонка c сайта
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            td
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                        tr(class='tr__price')
-                            th(scope="row") Ежемесячно
+                            th(scope='row') Использование SIP-транка с фиксированной телефонной связью для приёма входящих звонков
                             td  Бесплатно
-                            td  99 грн.
-                            td  150 грн.
-                            td  199 грн.
+                        tr
+                            th(scope='row') Использование SIP-транка с фиксированной телефонной связью для входящих-исходящих звонков
+                            td  50 грн. в мес.
+
+
             article(class='contacts' id='section6')
                 h2.article__header  Контакты
                 .contacts__container
@@ -330,12 +601,12 @@ html(lang="ru")
 
 
 
-    //script(type="text/javascript" src="js/jquery.min.js")
-    script(type="text/javascript" src="js/jquery-2.1.3.min.js")
-    script(type="text/javascript" src="js/jquery.bxslider.min.js")
-    script(type="text/javascript" src="js/parallax.min.js")
-    script(type="text/javascript" src="js/jqBootstrapValidation.js")
-    script(type="text/javascript" src="js/waypoints.min.js")
-    script(type="text/javascript" src="js/animate-css.js")
-    script(type="text/javascript" src="js/jquery.singlePageNav.min.js")
-    script(type="text/javascript" src="js/main.js")
+
+        script(type="text/javascript" src="js/jquery-2.1.3.min.js")
+        script(defer type="text/javascript" src="js/jquery.bxslider.min.js")
+        script(defer type="text/javascript" src="js/parallax.min.js")
+        script(defer type="text/javascript" src="js/jqBootstrapValidation.js")
+        script(defer type="text/javascript" src="js/waypoints.min.js")
+        script(type="text/javascript" src="js/jquery.singlePageNav.min.js")
+        script(defer type="text/javascript" src="js/bootstrap.min.js")
+        script(type="text/javascript" src="js/main.js")

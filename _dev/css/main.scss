@@ -1,6 +1,9 @@
 //tools
 @import "_misc/mixins";
 @import "_misc/normalize";
+@import "bootstrap.min.css";
+@import "animate.css";
+@import "jquery.bxslider.min.css";
 
 //
 @import "themes/classic";
@@ -26,6 +29,7 @@ body {
 }
 
 html {
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
 
   @include desktop {
@@ -46,6 +50,7 @@ html {
 }
 
 p {
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 20px;
 
   @include desktop {
@@ -65,12 +70,50 @@ p {
   }
 }
 
+.nav > li > a {
+  padding: 0;
+}
+
 h2 {
-  font-size: 32px;
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: rem(32px);
+
+  @include phones {
+    font-size: 22px;
+  }
 }
 
 h3 {
-  font-size: 24px;
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: rem(24px);
+  font-weight: 600;
+}
+
+.loader {
+  background: none repeat scroll 0 0 #ffffff;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.loader .loader_inner {
+  background-image: url("../img/preloader.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
 }
 
 .wrapper {
@@ -94,11 +137,15 @@ h3 {
   //
   //}
   //
-  //@include phones {
-  //  width: auto;
-  //}
+  @include phones {
+    padding-top: 0;
+  }
 
 
+}
+
+.hidden {
+  display: none;
 }
 
 .header {
@@ -107,23 +154,38 @@ h3 {
   width: 100%;
   background: rgba(247, 226, 150, 0.5);
   position: relative;
+
+  @include phones {
+    height: 170px;
+  }
 }
 
 .header__logo {
   position: absolute;
   left: 5%;
   top: -11%;
+
   & h1 {
     padding: 0;
     margin: 0;
     color: black;
-    font-size: 60px;
+    font-size: rem(60px);
     letter-spacing: 8px;
+    font-weight: 600;
+
+    @include phones {
+      font-size: 32px;
+    }
+  }
+
+  @include phones {
+    left: 32%;
+    top: -13%;
   }
 }
 
 .provider__txt {
-
+  width: 40%;
   position: absolute;
   top: 10%;
   left: 5%;
@@ -132,21 +194,43 @@ h3 {
   & p {
     padding: 0;
     margin: 0;
-    font-size: 30px;
+    font-size: rem(30px);
+    letter-spacing: 2px;
+
+    @include tablets {
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+  }
+
+
+  @include phones {
+    display: none;
   }
 }
 
 .header_descr {
   & h2 {
     position: absolute;
-    color: #000;
+    color: rgba(0, 0, 0, 0.8);
     display: block;
-    font-size: 23px;
+    font-size: rem(23px);
     font-weight: 600;
     right: 0%;
     top: -18%;
     letter-spacing: 3px;
     width: 327px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    @include tablets {
+      top: -29%;
+    }
+
+    @include phones {
+      right: -13%;
+      top: -49%;
+      width: 260px;
+    }
 
     &::before {
       position: absolute;
@@ -154,7 +238,7 @@ h3 {
       width: 100%;
       height: 7px;
       background: rgba(248, 211, 76, 0.8);
-      top: 39%;
+      top: 40%;
       right: 22%;
       z-index: -1;
     }
@@ -162,16 +246,33 @@ h3 {
 }
 
 .header__slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
   position: absolute;
   width: 50%;
   right: 3%;
-  bottom: 16px;
+  bottom: 0;
   text-align: center;
 
   & p {
     font-weight: 100;
     color: rgba(60, 66, 71, 0.9);;
-    font-size: 34px;
+    font-size: rem(34px);
+    letter-spacing: 1px;
+
+    @include tablets {
+      font-size: 25px;
+    }
+  }
+
+  @include tablets {
+    width: 40%;
+  }
+
+  @include phones {
+    display: none;
   }
 }
 
@@ -185,6 +286,14 @@ h3 {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   z-index: 2;
   transition: all 0.5s;
+
+  @include tablets {
+    display: none;
+  }
+
+  @include phones {
+    display: none;
+  }
 
   & ul {
     padding: 0;
@@ -200,7 +309,7 @@ h3 {
   & li {
     padding: 0;
     margin: 0;
-    font-size: 23px;
+    font-size: rem(23px);
     font-weight: 600;
 
     &:hover {
@@ -210,14 +319,15 @@ h3 {
 
   & .current {
     position: relative;
-    color: black;
+    color: #454FAA;
     text-decoration: none;
     font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 
     &::before {
-      width: 170%;
+      width: 150%;
       height: 7px;
-      right: -32%;
+      right: -24%;
       position: absolute;
       content: "";
       background: rgba(248, 211, 76, 0.8);
@@ -232,6 +342,7 @@ h3 {
   color: black;
   font-weight: 100;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
 
   &:visited {
     text-decoration: none;
@@ -253,18 +364,96 @@ h3 {
 
 }
 
+.nav__container-mob {
+  height: 100%;
+  width: 130%;
 
+}
+
+.nav__mobile {
+  display: none;
+  top: 2%;
+  left: 4%;
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 2px;
+  background: rgba(234, 234, 255, 0.7);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transition: all 0.5s;
+
+  @include tablets {
+    display: block;
+  }
+
+  @include phones {
+    display: block;
+  }
+}
+
+.nav__lines {
+  position: absolute;
+  bottom: 78%;
+  left: 14%;
+
+  & p {
+    font-size: 110px;
+    margin: 0;
+    padding: 0;
+    line-height: 0.17;
+  }
+}
+
+.nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 35%;
+  padding: 0;
+  margin: 0;
+  background: rgb(229, 229, 229);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  border: 1px solid black;
+  width: 65vw;
+  height: 220px;
+  list-style: none;
+  font-size: 23px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  margin-left: 120%;
+  text-align: center;
+  transition: all 1s;
+
+  & .current {
+    font-weight: 600;
+
+  }
+}
+
+.nav__container {
+  width: 100%;
+  height: 80px;
+
+  //&:hover .nav__dropdown {
+  //  display: flex;
+  //}
+}
 
 .header__contacts {
   position: absolute;
   width: 30%;
   top: 52%;
   left: 5%;
-  font-size: 25px;
+  font-size: rem(25px);
   text-align: left;
   font-weight: 600;
   animation-duration: 3s;
   animation-delay: 2s;
+  min-width: 250px;
 
   & a {
     display: block;
@@ -273,6 +462,22 @@ h3 {
     font-style: normal;
     letter-spacing: 1px;
   }
+
+  @include desktop {
+    font-size: 21px;
+  }
+
+  @include tablets {
+    font-size: 21px;
+  }
+
+  @include phones {
+    font-size: 20px;
+    top: 30%;
+    left: 26%;
+    text-align: right;
+  }
+
 }
 
 .bxslider, .slide {
@@ -287,6 +492,10 @@ h3 {
   width: 50%;
   top: 10%;
   right: 3%;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .bxslider li {
@@ -309,7 +518,7 @@ h3 {
   padding-left: 15px;
   padding-right: 15px;
   font-weight: 600;
-
+  letter-spacing: 2px;
 
 }
 
@@ -348,6 +557,10 @@ article {
   letter-spacing: 6px;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  @include phones {
+    width: 95%;
+  }
 }
 
 .how__descr {
@@ -357,6 +570,14 @@ article {
   margin-left: 5%;
   padding: 10px;
   background: rgba(255, 255, 255, 0.7);
+
+  @include tablets {
+    width: 90%;
+  }
+
+  @include phones {
+    width: 90%;
+  }
 }
 
 .rollIn {
@@ -367,15 +588,32 @@ article {
 //functions
 
 .functions {
-  height: 650px;
+  height: 100vh;
+  position: relative;
 
   &::before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 433px;
+    height: 77%;
     bottom: 0;
     z-index: -1;
+
+    @include tablets {
+      display: none;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  @include tablets {
+    height: 800px;
+  }
+
+  @include phones {
+    height: 800px;
   }
 }
 
@@ -386,29 +624,44 @@ article {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 20px;
+
+  @include phones {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .func__list, .func__item {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 22px;
+  font-size: rem(22px);
 }
 
 .func__list {
   flex: 2 1 300px;
   text-align: right;
-  margin-top: 35px;
+  margin-top: 22px;
   padding-top: 20px;
   padding-bottom: 25px;
   border-right: 3px solid black;
+  width: 40%;
 
   & li {
 
     position: relative;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     letter-spacing: 1px;
+
+  }
+
+  @include tablets {
+    padding-bottom: 0;
+  }
+
+  @include phones {
+    padding-right: 7%;
 
   }
 }
@@ -421,6 +674,10 @@ article {
   margin-left: 15%;
   transition: background 1s;
 
+  @include phones {
+    margin-left: 0;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -431,11 +688,31 @@ article {
     right: 4%;
     z-index: -1;
     transition: 0.5s;
+
+    @include phones {
+      display: none;
+
+    }
+
   }
 
   & a {
     text-decoration: none;
     color: black;
+
+    & .active {
+      background: black;
+    }
+
+    @include tablets {
+      font-size: 18px;
+      margin-left: 0;
+    }
+
+    @include phones {
+      font-size: 14px;
+      margin-left: 0;
+    }
   }
 
   &:hover {
@@ -461,6 +738,7 @@ article {
     }
 
   }
+
 }
 
 .func__item-active {
@@ -490,31 +768,110 @@ article {
   margin-left: 5%;
   margin-right: 5%;
   position: relative;
+  width: 60%;
 }
 
 .func__descr {
-
   display: none;
   flex-direction: column;
   align-items: center;
   transition: all 1s;
 
   & h3 {
+    position: absolute;
+    top: -6%;
+    left: 10%;
+    right: 10%;
     text-align: center;
     text-transform: uppercase;
     font-size: 32px;
     font-weight: 300;
+
+    @include phones {
+      font-size: 26px;
+    }
   }
 
   & p {
+    font-size: 22px;
+    margin-top: 10%;
     text-align: justify;
+
+    @include tablets {
+      font-size: 20px;
+      margin-top: 25%;
+    }
+
+    @include phones {
+      font-size: 14px;
+      margin-top: 40%;
+    }
   }
+
 }
+
 
 .func__descr-active {
   display: flex;
   transition: all 1s;
 
+}
+
+//bootstrap_functions
+
+.func__container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 78.5vh;
+  position: absolute;
+  bottom: 0%;
+
+  @include tablets {
+    height: 65vh;
+  }
+
+  @include phones {
+    height: 65vh;
+  }
+
+}
+
+.table_tabs-mob1 {
+  flex: 2 1 300px;
+  text-align: right;
+  margin-top: 22px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-right: 3px solid black;
+  width: 40%;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: rem(22px);
+
+  & li {
+    text-align: right;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+
+    & .active a {
+      background: black;
+    }
+  }
+
+}
+
+.tab-content1 {
+  flex: 3 1 400px;
+  margin-top: 17px;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: relative;
+  width: 60%;
 }
 
 .gsm {
@@ -563,6 +920,7 @@ article {
   margin: 0 auto;
   margin-top: 20px;
   padding-top: 15px;
+  margin-bottom: 10px;
 }
 
 .gsm_3 {
@@ -571,6 +929,16 @@ article {
   font-weight: 600;
   color: #454FAA;
   font-weight: 100;
+
+  @include tablets {
+    margin-left: 20%;
+    font-size: 26px;
+  }
+
+  @include phones {
+    margin-left: 12%;
+  }
+
 }
 
 .superprice {
@@ -628,6 +996,50 @@ article {
   }
 }
 
+.price__descr {
+  text-align: center;
+  margin-top: 45px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.additional_serv-table {
+  margin: 40px auto 0;
+  width: 85%;
+  background-color: rgba(55, 58, 60, .8);
+  color: #fbf1cb;
+  font-size: rem(22px);
+
+  & thead {
+    text-transform: uppercase;
+    text-align: center;
+    color: #eaeaff;
+  }
+
+}
+
+
+.table__big {
+  @include tablets {
+    display: none;
+  }
+  @include phones {
+    display: none;
+  }
+}
+
+.table__small {
+  display: none;
+
+  @include tablets {
+    display: block;
+  }
+  @include phones {
+    display: block;
+  }
+}
+
 .table__price {
   margin: 0 auto;
   margin-top: 40px;
@@ -666,6 +1078,58 @@ article {
 .second__col, .third__col, .fourth__col, .fifth__col {
   width: 15%;
 }
+
+.price__mob {
+  margin: 40px auto 0;
+  width: 100%;
+}
+
+.nav-tabs > li > a {
+  line-height: 40px;
+}
+
+.fade {
+  transition: opacity .5s linear;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid rgba(55, 58, 60, .8);
+}
+
+.table_tabs-mob {
+  background: rgba(55, 58, 60, .8);
+  font-size: rem(18px);
+  font-weight: 600;
+
+  & li {
+    width: 25%;
+    text-align: center;
+    height: 40px;
+
+  }
+
+  & a {
+    color: #fbf1cb;
+    padding: 0;
+    text-transform: uppercase;
+    height: 100%;
+
+  }
+}
+
+.table_price-mob {
+  background: rgba(55, 58, 60, .8);
+  font-size: rem(20px);
+  font-weight: 600;
+  width: 100%;
+
+  & th {
+    text-transform: none;
+    color: #fbf1cb;
+  }
+
+}
+
 
 //contacts
 
@@ -734,6 +1198,10 @@ article {
     display: block;
     margin: 0 auto;
     margin-top: 30px;
+
+    @include tablets {
+      width: 80%;
+    }
   }
 }
 
