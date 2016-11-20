@@ -6,9 +6,8 @@
 @import "jquery.bxslider.min.css";
 
 //
-@import "themes/classic";
-@import "font-awesome.css";
 //fonts
+@import "font-awesome.css";
 @import "../fonts/gilroy.css";
 
 /*
@@ -25,7 +24,6 @@ body {
   position: relative;
   background-size: cover;
   font-family: Gilroy, Arial, sans-serif;
-  color: black;
 }
 
 html {
@@ -163,7 +161,7 @@ h3 {
 .header__logo {
   position: absolute;
   left: 5%;
-  top: -11%;
+  top: -9%;
 
   & h1 {
     padding: 0;
@@ -335,6 +333,24 @@ h3 {
       z-index: -1;
     }
   }
+}
+
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .nav__link {
@@ -513,7 +529,7 @@ h3 {
   align-items: center;
   text-align: center;
   height: 180px;
-  font-size: 30px;
+  font-size: rem(30px);
   color: black;
   padding-left: 15px;
   padding-right: 15px;
@@ -609,7 +625,7 @@ article {
   }
 
   @include tablets {
-    height: 800px;
+    height: 145vh;
   }
 
   @include phones {
@@ -779,7 +795,7 @@ article {
 
   & h3 {
     position: absolute;
-    top: -6%;
+    top: -8%;
     left: 10%;
     right: 10%;
     text-align: center;
@@ -823,12 +839,12 @@ article {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 78.5vh;
+  height: 79vh;
   position: absolute;
   bottom: 0%;
 
   @include tablets {
-    height: 65vh;
+    height: 115vh;
   }
 
   @include phones {
