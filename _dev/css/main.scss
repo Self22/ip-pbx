@@ -117,6 +117,7 @@ h3 {
 .wrapper {
   padding: 10px;
   padding-top: 40px;
+  position: relative;
   //width: 1200px;
 
   margin: 0 auto;
@@ -218,7 +219,7 @@ h3 {
     top: -18%;
     letter-spacing: 3px;
     width: 327px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
 
     @include tablets {
       top: -29%;
@@ -235,7 +236,7 @@ h3 {
       content: "";
       width: 100%;
       height: 7px;
-      background: rgba(248, 211, 76, 0.8);
+      background: rgba(248, 211, 76, 0.5);
       top: 40%;
       right: 22%;
       z-index: -1;
@@ -386,6 +387,7 @@ h3 {
 
 }
 
+
 .nav__mobile {
   display: none;
   top: 2%;
@@ -405,6 +407,10 @@ h3 {
   }
 
   @include phones {
+    display: block;
+  }
+
+  :hover .nav__dropdown {
     display: block;
   }
 }
@@ -457,6 +463,17 @@ h3 {
   //&:hover .nav__dropdown {
   //  display: flex;
   //}
+}
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.hidden {
+  display: none;
 }
 
 .header__contacts {
@@ -548,8 +565,15 @@ h3 {
 
 article {
   position: relative;
-  padding-top: 70px;
+  padding-top: 60px;
   padding-bottom: 50px;
+
+  @include tablets {
+    padding-top: 40px;
+  }
+  @include phones {
+    padding-top: 40px;
+  }
 }
 
 .parallax-window {
@@ -568,7 +592,7 @@ article {
   display: block;
   text-align: center;
   border: 1px solid black;
-  width: 40%;
+  width: 50%;
   text-transform: uppercase;
   letter-spacing: 6px;
   padding-top: 5px;
@@ -604,7 +628,7 @@ article {
 //functions
 
 .functions {
-  height: 110vh;
+  height: 80vh;
   position: relative;
 
   &::before {
@@ -625,27 +649,29 @@ article {
   }
 
   @include tablets {
-    height: 145vh;
+    height: 1000px;
+    background: rgba(229, 229, 255, .8);
   }
 
   @include phones {
     height: 800px;
+    background: rgba(229, 229, 255, .8);
   }
 }
 
-.func__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 20px;
-
-  @include phones {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
+//.func__container {
+//  display: flex;
+//  flex-direction: row;
+//  justify-content: space-around;
+//  margin-left: 5%;
+//  margin-right: 5%;
+//  margin-top: 20px;
+//
+//  @include phones {
+//    margin-left: 0;
+//    margin-right: 0;
+//  }
+//}
 
 .func__list, .func__item {
   list-style: none;
@@ -689,6 +715,10 @@ article {
   font-weight: 600;
   margin-left: 15%;
   transition: background 1s;
+
+  @include tablets {
+    margin-left: 0;
+  }
 
   @include phones {
     margin-left: 0;
@@ -803,6 +833,12 @@ article {
     font-size: 32px;
     font-weight: 300;
 
+    @include tablets {
+      font-size: 28px;
+      left: 5%;
+      right: 5%;
+    }
+
     @include phones {
       font-size: 26px;
     }
@@ -839,16 +875,16 @@ article {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 79vh;
+  height: 55vh;
   position: absolute;
   bottom: 0%;
 
   @include tablets {
-    height: 115vh;
+    height: 790px;
   }
 
   @include phones {
-    height: 65vh;
+    height: 600px;
   }
 
 }
@@ -1020,6 +1056,18 @@ article {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
+.test_descr {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: rem(20px);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+
 .additional_serv-table {
   margin: 40px auto 0;
   width: 85%;
@@ -1135,7 +1183,7 @@ article {
 
 .table_price-mob {
   background: rgba(55, 58, 60, .8);
-  font-size: rem(20px);
+  font-size: 14px;
   font-weight: 600;
   width: 100%;
 
@@ -1155,6 +1203,11 @@ article {
   justify-content: space-around;
   margin-top: 50px;
   height: 45vh;
+
+  @include phones {
+    height: 650px;
+    margin-top: 25px;
+  }
 }
 
 .contacts__content, .contacts__form {
@@ -1165,7 +1218,7 @@ article {
   text-align: right;
   text-align: -webkit-right;
   font-weight: 600;
-  font-size: 27px;
+  font-size: rem(27px);
 
   padding-right: 6%;
   padding-top: 50px;
@@ -1177,7 +1230,7 @@ article {
   }
 
   & p {
-    font-size: 25px;
+    font-size: rem(25px);
 
     &.fin {
       margin-bottom: 5px;
@@ -1186,6 +1239,10 @@ article {
     & .post {
       max-width: 400px;
     }
+  }
+
+  @include phones {
+    padding-top: 0;
   }
 
 }
@@ -1197,17 +1254,17 @@ article {
 
   & h3 {
     margin-top: 0;
-    font-size: 25px;
+    font-size: rem(25px);
     text-align: center;
   }
 
   & span {
-    font-size: 22px;
+    font-size: rem(22px);
     font-weight: 500;
   }
 
   & button {
-    font-size: 20px;
+    font-size: rem(20px);
     font-weight: 400;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
     width: 40%;
@@ -1228,7 +1285,7 @@ article {
   & input, textarea {
     display: block;
     width: 100%;
-    font-size: 20px;
+    font-size: rem(20px);
     text-indent: 5px;
     font-weight: 100;
     margin-top: 5px;

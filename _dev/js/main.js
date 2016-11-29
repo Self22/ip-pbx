@@ -5,8 +5,20 @@ if (window.screen.width > 800) {
 
 $(document).ready(function () {
 
-    $('.nav__container').on('click', function (e) {
-            $('.nav__dropdown').fadeIn(500).fadeOut(3000);
+    $('.nav__mobile').on('click', function (e) {
+        $('.overlay').removeClass('hidden');
+        $('.nav__dropdown').show();
+        setTimeout(function () {
+            $('.nav__dropdown').hide();
+        }, 5000);
+        
+
+        $('.overlay').on('click', function (e) {
+
+            $('.overlay').addClass('hidden');
+            $('.nav__dropdown').hide();
+        })
+
         }
     )
 
