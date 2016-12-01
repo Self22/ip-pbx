@@ -1,1 +1,48 @@
-{"version":3,"sources":["main.js"],"names":["window","screen","width","document","write","$","ready","on","e","removeClass","show","setTimeout","hide","addClass","bxSlider","animated","parallax","imageSrc","jqBootstrapValidation","click","preventDefault","this","tab","singlePageNav","console","log","$this","item","closest","siblings","load","fadeOut","delay"],"mappings":"AACIA,OAAOC,OAAOC,MAAQ,KACtBC,SAASC,MAAM,oEAGnBC,EAAEF,UAAUG,MAAM,WAEdD,EAAE,gBAAgBE,GAAG,QAAS,SAAUC,GAChCH,EAAE,YAAYI,YAAY,UAC1BJ,EAAE,kBAAkBK,OACpBC,WAAY,WACRN,EAAE,kBAAkBO,QAChB,KAGRP,EAAE,YAAYE,GAAG,QAAS,SAAUC,GAEhCH,EAAE,YAAYQ,SAAS,UACvBR,EAAE,kBAAkBO,aAQpCP,EAAEF,UAAUG,MAAM,WAEdD,EAAE,aAAaS,WAGfT,EAAE,qBAAqBU,SAAS,UAAW,eAC3CV,EAAE,sBAAsBU,SAAS,aAAc,eAC/CV,EAAE,mBAAmBU,SAAS,cAAe,eAC7CV,EAAE,oBAAoBU,SAAS,WAAY,eAC3CV,EAAE,eAAeU,SAAS,cAAe,eAIzCV,EAAE,oBAAoBW,UAAUC,SAAU,mBAG1CZ,EAAE,2BAA2Ba,0BAMjCb,EAAE,cAAcc,MAAM,SAAUX,GAC5BA,EAAEY,iBACFf,EAAEgB,MAAMC,IAAI,UAGhBjB,EAAE,mBAAmBkB,gBAErBlB,EAAEF,UAAUG,MAAM,WAMdD,EAAE,eAAeE,GAAG,QAAS,SAAUC,GACnCA,EAAEY,iBAEFI,QAAQC,IAAI,EAEZ,IACIC,GAAQrB,EAAEgB,MACVM,EAAOD,EAAME,QAAQ,cAGzBD,GAAKd,SAAS,qBACLgB,WACApB,YAAY,yBAQ7BJ,EAAEL,QAAQ8B,KAAK,WAEXzB,EAAE,iBAAiB0B,UACnB1B,EAAE,WAAW2B,MAAM,KAAKD,QAAQ","file":"main.js","sourcesContent":["\r\nif (window.screen.width > 800) {\r\n    document.write('<script type=\"text/javascript\" src=\"js/animate-css.js\"><\\/script>');\r\n}\r\n\r\n$(document).ready(function () {\r\n\r\n    $('.nav__mobile').on('click', function (e) {\r\n            $('.overlay').removeClass('hidden');\r\n            $('.nav__dropdown').show();\r\n            setTimeout( function () {\r\n                $('.nav__dropdown').hide();\r\n                } , 5000 );\r\n        \r\n\r\n            $('.overlay').on('click', function (e) {\r\n\r\n                $('.overlay').addClass('hidden');\r\n                $('.nav__dropdown').hide();\r\n            })\r\n\r\n        }\r\n    )\r\n\r\n});\r\n\r\n$(document).ready(function () {\r\n    //Slider\r\n    $('.bxslider').bxSlider();\r\n\r\n\r\n    $(\".header__contacts\").animated(\"flipInY\", \"fadeOutDown\");\r\n    $(\".contacts__content\").animated(\"fadeInLeft\", \"fadeOutDown\");\r\n    $(\".contacts__form\").animated(\"fadeInRight\", \"fadeOutDown\");\r\n    $(\".article__header\").animated(\"fadeInUp\", \"fadeOutDown\");\r\n    $(\".superprice\").animated(\"fadeInUpBig\", \"fadeOutDown\");\r\n\r\n\r\n    //Parallax\r\n    $('.parallax-window').parallax({imageSrc: 'img/how_bg.jpg'});\r\n\r\n    //Валидация\r\n    $(\"input, select, textarea\").jqBootstrapValidation();\r\n\r\n    //Фиксированная навигация\r\n\r\n});\r\n\r\n$('#my_tabs a').click(function (e) {\r\n    e.preventDefault()\r\n    $(this).tab('show')\r\n})\r\n\r\n$('#nav__container').singlePageNav();\r\n\r\n$(document).ready(function () {\r\n\r\n    //tabs\r\n\r\n\r\n\r\n    $('.func__linc').on('click', function (e) {\r\n        e.preventDefault();\r\n\r\n        console.log(1);\r\n\r\n        var\r\n            $this = $(this),\r\n            item = $this.closest('.func__item');\r\n\r\n\r\n        item.addClass('func__item-active')\r\n                .siblings()\r\n                .removeClass('func__item-active');\r\n\r\n\r\n    })\r\n\r\n\r\n});\r\n\r\n$(window).load(function () {\r\n\r\n    $(\".loader_inner\").fadeOut();\r\n    $(\".loader\").delay(400).fadeOut(\"slow\");\r\n\r\n});\r\n\r\n\r\n"]}
+{
+  "version": 3,
+  "sources": [
+    "main.js"
+  ],
+  "names": [
+    "window",
+    "screen",
+    "width",
+    "document",
+    "write",
+    "nav",
+    "querySelector",
+    "drop",
+    "oLay",
+    "addEventListener",
+    "event",
+    "preventDefault",
+    "classList",
+    "toggle",
+    "$",
+    "ready",
+    "bxSlider",
+    "animated",
+    "parallax",
+    "imageSrc",
+    "jqBootstrapValidation",
+    "click",
+    "e",
+    "this",
+    "tab",
+    "singlePageNav",
+    "on",
+    "console",
+    "log",
+    "$this",
+    "item",
+    "closest",
+    "addClass",
+    "siblings",
+    "removeClass"
+  ],
+  "mappings": "AACIA,OAAOC,OAAOC,MAAQ,KACtBC,SAASC,MAAM,mEAmCf,IAAIC,KAAMF,SAASG,cAAc,gBAC7BC,KAAOJ,SAASG,cAAc,kBAC9BE,KAAOL,SAASG,cAAc,WAClCD,KAAII,iBAAiB,MAAO,WACxBC,MAAMC,iBACNJ,KAAKK,UAAUC,OAAO,UACtBL,KAAKI,UAAUC,OAAO,YAG1BR,IAAII,iBAAiB,QAAS,WAC1BC,MAAMC,iBACNJ,KAAKK,UAAUC,OAAO,UACtBL,KAAKI,UAAUC,OAAO,YAc9BC,EAAEX,UAAUY,MAAM,WAEdD,EAAE,aAAaE,WAGfF,EAAE,qBAAqBG,SAAS,UAAW,eAC3CH,EAAE,sBAAsBG,SAAS,aAAc,eAC/CH,EAAE,mBAAmBG,SAAS,cAAe,eAC7CH,EAAE,oBAAoBG,SAAS,WAAY,eAC3CH,EAAE,eAAeG,SAAS,cAAe,eAIzCH,EAAE,oBAAoBI,UAAUC,SAAU,mBAG1CL,EAAE,2BAA2BM,0BAMjCN,EAAE,cAAcO,MAAM,SAAUC,GAC5BA,EAAEX,iBACFG,EAAES,MAAMC,IAAI,UAIhBV,EAAE,mBAAmBW,gBAErBX,EAAEX,UAAUY,MAAM,WAMdD,EAAE,eAAeY,GAAG,QAAS,SAAUJ,GACnCA,EAAEX,iBAEFgB,QAAQC,IAAI,EAEZ,IACIC,GAAQf,EAAES,MACVO,EAAOD,EAAME,QAAQ,cAGzBD,GAAKE,SAAS,qBACLC,WACAC,YAAY",
+  "file": "main.js",
+  "sourcesContent": [
+    "\r\nif (window.screen.width > 800) {\r\n    document.write('<script type=\"text/javascript\" src=\"js/animate-css.js\"><\\/script>');\r\n}\r\n\r\n////////////////////////////////////////////////////////////////////////////////////////////////////\r\n\r\n    // $('.nav__mobile').on('click', function (e) {\r\n    //     $('.overlay').toggle();\r\n    //     $('.nav__dropdown').toggle();\r\n    //\r\n    //\r\n    //     setTimeout(function () {\r\n    //         $('.nav__dropdown').hide();\r\n    //         $('.overlay').hide();\r\n    //     }, 4000);\r\n    //\r\n    //     }\r\n    // );\r\n    ///////////////////////////////////////////////////////////////////////////////////////////////\r\n    // $(function() {\r\n    //     $('.nav__mobile').click(function(){  // добираемся до элемента по которому будем кликать\r\n    //         $('.overlay').show(function(){ // после клика запускаем наш оверлэй\r\n    //             $('.nav__dropdown').show(\r\n    //             );\r\n    //             }); // а теперь аккуратно выводим наш блок\r\n    //     });\r\n    //\r\n    //\r\n    //\r\n    //     $('.overlay').add('a.nav__link').click(function(){ // кликаем по элементу который всё это будет закрывать, также здесь можно добавить сам оверлэй, чтобы по клику вне блока, всё сворачивалось.\r\n    //         $('.nav__dropdown').hide(function(){ // убираем наш блок\r\n    //             $('.overlay').hide(); // и теперь убираем оверлэй\r\n    //         });\r\n    //     });\r\n    // });\r\n    ////////////////////////////////////////////////////////////////////////////////////////////////\r\n    var nav = document.querySelector('.nav__mobile');\r\n    var drop = document.querySelector('.nav__dropdown');\r\n    var oLay = document.querySelector('.overlay');\r\n    nav.addEventListener('tap', function () {\r\n        event.preventDefault();\r\n        drop.classList.toggle('hidden');\r\n        oLay.classList.toggle('hidden');\r\n    })\r\n\r\n    nav.addEventListener('click', function () {\r\n        event.preventDefault();\r\n        drop.classList.toggle('hidden');\r\n        oLay.classList.toggle('hidden');\r\n    })\r\n\r\n\r\n\r\n// $(document).ready(function () {\r\n//     $('.wrapper').on('click', function (e) {\r\n//         $('.nav__dropdown').hide();\r\n//         $('.overlay').hide();\r\n//     })\r\n// });\r\n\r\n\r\n\r\n$(document).ready(function () {\r\n    //Slider\r\n    $('.bxslider').bxSlider();\r\n\r\n\r\n    $(\".header__contacts\").animated(\"flipInY\", \"fadeOutDown\");\r\n    $(\".contacts__content\").animated(\"fadeInLeft\", \"fadeOutDown\");\r\n    $(\".contacts__form\").animated(\"fadeInRight\", \"fadeOutDown\");\r\n    $(\".article__header\").animated(\"fadeInUp\", \"fadeOutDown\");\r\n    $(\".superprice\").animated(\"fadeInUpBig\", \"fadeOutDown\");\r\n\r\n\r\n    //Parallax\r\n    $('.parallax-window').parallax({imageSrc: 'img/how_bg.jpg'});\r\n\r\n    //Валидация\r\n    $(\"input, select, textarea\").jqBootstrapValidation();\r\n\r\n    //Фиксированная навигация\r\n\r\n});\r\n\r\n$('#my_tabs a').click(function (e) {\r\n    e.preventDefault()\r\n    $(this).tab('show')\r\n})\r\n\r\n\r\n$('#nav__container').singlePageNav();\r\n\r\n$(document).ready(function () {\r\n\r\n    //tabs\r\n\r\n\r\n\r\n    $('.func__linc').on('click', function (e) {\r\n        e.preventDefault();\r\n\r\n        console.log(1);\r\n\r\n        var\r\n            $this = $(this),\r\n            item = $this.closest('.func__item');\r\n\r\n\r\n        item.addClass('func__item-active')\r\n                .siblings()\r\n                .removeClass('func__item-active');\r\n\r\n\r\n    })\r\n\r\n\r\n});\r\n\r\n// $(window).load(function () {\r\n//\r\n//     $(\".loader_inner\").fadeOut();\r\n//     $(\".loader\").delay(400).fadeOut(\"slow\");\r\n//\r\n// });\r\n\r\n\r\n"
+  ]
+}

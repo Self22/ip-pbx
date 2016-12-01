@@ -3,26 +3,61 @@ if (window.screen.width > 800) {
     document.write('<script type="text/javascript" src="js/animate-css.js"><\/script>');
 }
 
-$(document).ready(function () {
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    $('.nav__mobile').on('click', function (e) {
-        $('.overlay').removeClass('hidden');
-        $('.nav__dropdown').show();
-        setTimeout(function () {
-            $('.nav__dropdown').hide();
-        }, 5000);
-        
+// $('.nav__mobile').on('click', function (e) {
+//     $('.overlay').toggle();
+//     $('.nav__dropdown').toggle();
+//
+//
+//     setTimeout(function () {
+//         $('.nav__dropdown').hide();
+//         $('.overlay').hide();
+//     }, 4000);
+//
+//     }
+// );
+///////////////////////////////////////////////////////////////////////////////////////////////
+// $(function() {
+//     $('.nav__mobile').click(function(){  // добираемся до элемента по которому будем кликать
+//         $('.overlay').show(function(){ // после клика запускаем наш оверлэй
+//             $('.nav__dropdown').show(
+//             );
+//             }); // а теперь аккуратно выводим наш блок
+//     });
+//
+//
+//
+//     $('.overlay').add('a.nav__link').click(function(){ // кликаем по элементу который всё это будет закрывать, также здесь можно добавить сам оверлэй, чтобы по клику вне блока, всё сворачивалось.
+//         $('.nav__dropdown').hide(function(){ // убираем наш блок
+//             $('.overlay').hide(); // и теперь убираем оверлэй
+//         });
+//     });
+// });
+////////////////////////////////////////////////////////////////////////////////////////////////
+var nav = document.querySelector('.nav__mobile');
+var drop = document.querySelector('.nav__dropdown');
+var oLay = document.querySelector('.overlay');
+nav.addEventListener('tap', function () {
+    event.preventDefault();
+    drop.classList.toggle('hidden');
+    oLay.classList.toggle('hidden');
+})
 
-        $('.overlay').on('click', function (e) {
+nav.addEventListener('click', function () {
+    event.preventDefault();
+    drop.classList.toggle('hidden');
+    oLay.classList.toggle('hidden');
+})
 
-            $('.overlay').addClass('hidden');
-            $('.nav__dropdown').hide();
-        })
 
-        }
-    )
+// $(document).ready(function () {
+//     $('.wrapper').on('click', function (e) {
+//         $('.nav__dropdown').hide();
+//         $('.overlay').hide();
+//     })
+// });
 
-});
 
 $(document).ready(function () {
     //Slider
@@ -50,6 +85,7 @@ $('#my_tabs a').click(function (e) {
     e.preventDefault()
     $(this).tab('show')
 })
+
 
 $('#nav__container').singlePageNav();
 
@@ -79,11 +115,11 @@ $(document).ready(function () {
 
 });
 
-$(window).load(function () {
-
-    $(".loader_inner").fadeOut();
-    $(".loader").delay(400).fadeOut("slow");
-
-});
+// $(window).load(function () {
+//
+//     $(".loader_inner").fadeOut();
+//     $(".loader").delay(400).fadeOut("slow");
+//
+// });
 
 

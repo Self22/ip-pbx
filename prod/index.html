@@ -13,9 +13,8 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   </head>
   <body id="section1">
-    <div class="loader">
-      <div class="loader_inner"></div>
-    </div>
+  <!--.loader-->
+  <!--    .loader_inner-->
     <div class="wrapper">
       <div class="header">
         <div class="header__container">
@@ -41,6 +40,7 @@
               </ul>
             </nav>
             <nav class="nav__mobile">
+              <div class="overlay hidden"></div>
               <div class="nav__container-mob">
                 <div class="nav__lines">
                   <p>  _</p>
@@ -48,7 +48,7 @@
                   <p>  _</p>
                 </div>
               </div>
-              <ul class="nav__dropdown">
+              <ul class="nav__dropdown hidden">
                 <li><a class="nav__link current" href="#section1">Евро-тел</a></li>
                 <li><a class="nav__link" href="#section2">Как это работает</a></li>
                 <li><a class="nav__link" href="#section3">Функции</a></li>
@@ -608,12 +608,11 @@
         </div>
       </article>
     </div>
-  </body>
-  <div class="overlay hidden">
     <footer class="footer">
       <div class="copyright"> &copy;  Виртуальные АТС "Евро-тел" 2016</div>
     </footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q || []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');        ga('create', 'UA-42666121-4', 'auto');ga('send', 'pageview');
 </script>
+  <!--script(type="text/javascript" src="js/jquery.min.js")-->
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
     <script defer type="text/javascript" src="js/jquery.bxslider.min.js"></script>
     <script defer type="text/javascript" src="js/parallax.min.js"></script>
@@ -622,5 +621,5 @@
     <script type="text/javascript" src="js/jquery.singlePageNav.min.js"></script>
     <script defer type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-  </div>
+  </body>
 </html>

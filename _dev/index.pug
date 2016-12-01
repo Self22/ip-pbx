@@ -12,8 +12,8 @@ html(lang="ru")
         link(rel="stylesheet" href="css/main.css")
         link(rel="icon" href="img/favicon.ico" type="image/x-icon")
     body(id='section1')
-        .loader
-            .loader_inner
+        //.loader
+        //    .loader_inner
         .wrapper
             .header
                 div(class='header__container')
@@ -40,12 +40,13 @@ html(lang="ru")
                                 li
                                     a(class='nav__link hvr-grow-shadow' href="#section6") Контакты
                         nav.nav__mobile
+                            div(class='overlay hidden')
                             .nav__container-mob
                                 .nav__lines
                                     p   _
                                     p   _
                                     p   _
-                            ul.nav__dropdown
+                            ul(class='nav__dropdown hidden')
                                 li
                                     a(class='nav__link current' href="#section1") Евро-тел
                                 li
@@ -598,7 +599,7 @@ html(lang="ru")
                                 textarea(name="message" placeholder="Сообщение" data-validation-required-message="Вы не ввели сообщение" required)
                                 span(class="help-block text-danger")
                             button  Отправить
-    div(class='overlay hidden')
+
 
         footer.footer
             .copyright  &copy;  Виртуальные АТС "Евро-тел" 2016
@@ -608,6 +609,7 @@ html(lang="ru")
 
         </script>
 
+        //script(type="text/javascript" src="js/jquery.min.js")
         script(type="text/javascript" src="js/jquery-2.1.3.min.js")
         script(defer type="text/javascript" src="js/jquery.bxslider.min.js")
         script(defer type="text/javascript" src="js/parallax.min.js")

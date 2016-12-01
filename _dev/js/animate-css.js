@@ -11,7 +11,7 @@
             }
             ;
         }, {
-            offset: "80%"
+            offset: "50%"
         }).waypoint(function (dir) {
             if (dir === "down") {
                 $(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");

@@ -175,6 +175,11 @@ h3 {
     @include phones {
       font-size: 32px;
     }
+
+  }
+
+  @include tablets {
+    left: 30%;
   }
 
   @include phones {
@@ -223,12 +228,13 @@ h3 {
 
     @include tablets {
       top: -29%;
+      width: 215px;
     }
 
     @include phones {
-      right: -13%;
+      right: 0%;
       top: -49%;
-      width: 260px;
+      width: 215px;
     }
 
     &::before {
@@ -390,15 +396,15 @@ h3 {
 
 .nav__mobile {
   display: none;
-  top: 2%;
+  top: 5%;
   left: 4%;
   position: fixed;
   width: 80px;
   height: 80px;
   border: 1px solid black;
   border-radius: 2px;
-  background: rgba(234, 234, 255, 0.7);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  background: rgba(251, 241, 203, 0.3);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   z-index: 2;
   transition: all 0.5s;
 
@@ -410,9 +416,7 @@ h3 {
     display: block;
   }
 
-  :hover .nav__dropdown {
-    display: block;
-  }
+
 }
 
 .nav__lines {
@@ -429,10 +433,10 @@ h3 {
 }
 
 .nav__dropdown {
-  display: none;
   position: absolute;
-  top: 35%;
+  top: 5%;
   padding: 0;
+  padding-top: 10px;
   margin: 0;
   background: rgb(229, 229, 229);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
@@ -441,11 +445,11 @@ h3 {
   width: 65vw;
   height: 220px;
   list-style: none;
-  font-size: 23px;
+  font-size: rem(25px);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  z-index: 150;
   margin-left: 120%;
   text-align: center;
   transition: all 1s;
@@ -467,9 +471,12 @@ h3 {
 
 .overlay {
   position: fixed;
-  height: 100%;
-  width: 100%;
-  background: transparent;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+  background: rgba(229, 229, 229, 0.5);
 }
 
 .hidden {
@@ -1179,6 +1186,10 @@ article {
     height: 100%;
 
   }
+
+  @include phones {
+    font-size: 13px;
+  }
 }
 
 .table_price-mob {
@@ -1202,7 +1213,11 @@ article {
   flex-flow: row wrap;
   justify-content: space-around;
   margin-top: 50px;
-  height: 45vh;
+  height: 55vh;
+
+  @include tablets {
+    height: 400px;
+  }
 
   @include phones {
     height: 650px;
