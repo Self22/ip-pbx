@@ -93,11 +93,11 @@ gulp.task('css:build', function () {
                 }
             })
         }))
-        .pipe(sourcemaps.init()) //То же самое что и с js
+        .pipe(sourcemaps.init()) //Инициализируем sourcemap
         .pipe(sass().on('error', sass.logError)) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(cleanCSS()) //Сожмем
-        .pipe(sourcemaps.write('.'))
+        .pipe(sourcemaps.write('.'))//Пропишем карты
         .pipe(gulp.dest(path.dest.css)) //И в build
         .pipe(reload({stream: true}));
 });

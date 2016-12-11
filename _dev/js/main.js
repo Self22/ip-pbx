@@ -1,40 +1,30 @@
-
+//регулирование анимации от размера экрана
 if (window.screen.width > 800) {
     document.write('<script type="text/javascript" src="js/animate-css.js"><\/script>');
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+// асинхронная загрузка стилей
+!function () {
+    function _ready(callback) {
+        if (document.body) return callback();
+        setTimeout(_ready.bind(null, callback));
+    }
 
-// $('.nav__mobile').on('click', function (e) {
-//     $('.overlay').toggle();
-//     $('.nav__dropdown').toggle();
-//
-//
-//     setTimeout(function () {
-//         $('.nav__dropdown').hide();
-//         $('.overlay').hide();
-//     }, 4000);
-//
-//     }
-// );
-///////////////////////////////////////////////////////////////////////////////////////////////
-// $(function() {
-//     $('.nav__mobile').click(function(){  // добираемся до элемента по которому будем кликать
-//         $('.overlay').show(function(){ // после клика запускаем наш оверлэй
-//             $('.nav__dropdown').show(
-//             );
-//             }); // а теперь аккуратно выводим наш блок
-//     });
-//
-//
-//
-//     $('.overlay').add('a.nav__link').click(function(){ // кликаем по элементу который всё это будет закрывать, также здесь можно добавить сам оверлэй, чтобы по клику вне блока, всё сворачивалось.
-//         $('.nav__dropdown').hide(function(){ // убираем наш блок
-//             $('.overlay').hide(); // и теперь убираем оверлэй
-//         });
-//     });
-// });
-////////////////////////////////////////////////////////////////////////////////////////////////
+    _ready(function (event) {
+        [].forEach.call(document.querySelectorAll('link[rel="async-css"]'), function (lnk) {
+            var media = lnk.media;
+            // предотвратить блокирование рендеринга страницы (идея из loadCSS)
+            lnk.media = 'only nothing';
+            lnk.rel = 'stylesheet';
+            lnk.addEventListener('load', function () {
+                lnk.setAttribute('media', media || 'screen');
+            })
+        })
+    });
+}();
+
+
+// правильный мобильный nav-dropdown с оверлеем
 var nav = document.querySelector('.nav__mobile');
 var drop = document.querySelector('.nav__dropdown');
 var oLay = document.querySelector('.overlay');
@@ -50,13 +40,6 @@ nav.addEventListener('click', function () {
     oLay.classList.toggle('hidden');
 })
 
-
-// $(document).ready(function () {
-//     $('.wrapper').on('click', function (e) {
-//         $('.nav__dropdown').hide();
-//         $('.overlay').hide();
-//     })
-// });
 
 
 $(document).ready(function () {
@@ -114,12 +97,4 @@ $(document).ready(function () {
 
 
 });
-
-// $(window).load(function () {
-//
-//     $(".loader_inner").fadeOut();
-//     $(".loader").delay(400).fadeOut("slow");
-//
-// });
-
 
