@@ -417,7 +417,7 @@
 
 .price {
   min-height: 820px;
-  background: url("../img/telephons_bg.jpg");
+  background: url("../img/telephons_bg.jpg") fixed;
   background-size: cover;
 
   & .article__header {
